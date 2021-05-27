@@ -68,15 +68,19 @@ main div {
 text-decoration: none;
 align-items: flex-end;
 color: black;
-padding: 1em;
+/* padding: 1em; */
 }
 .event{
   box-sizing: border-box;
   /* outline: 1.5em solid #E0E2D0; */
 }
+.news{
+  align-items: flex-end;
+}
 .news .mini_link{
   position: absolute;
-  bottom: 0;
+  margin-bottom:
+  /* bottom: 0; */
 }
 .wallpaper{
   background-image: url("images/katalog/03.png");
@@ -90,17 +94,15 @@ padding: 1em;
 }
 .questions{
 width: 100vw;
-height: 1em;
+height: 2em;
 display: inline-grid;
 font-family: "Pragmatica_Bold";
 font-size: 2.8em;
-/* border-right: solid 1px black; */
 border-bottom:solid 1px black;
 grid-area: 3/1/4/9;
-align-items: center;
-color: white;
-text-shadow: black 1px 1px 0, black -1px -1px 0,
-             black -1px 1px 0, black 1px -1px 0;
+   color: black;
+   -webkit-text-stroke: 1px black;
+   -webkit-text-fill-color: white;
 }
 footer{
   width: 100vw;
@@ -109,6 +111,7 @@ footer{
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr, 1fr;
   box-sizing: border-box;
+  align-items: flex-end;
 }
 footer .mail {
   width: 100vw;
@@ -119,6 +122,32 @@ footer .inf_blocks {
   width: 25vw;
   height: 10em;
 
+}
+.mini_link{
+  font-size: 1em;
+  color: #C4C4C4;
+}
+input{
+  width: 23em;
+  height: 1.8em;
+  font-size: 1.25em;
+  font-family: "Pragmatica_Italic"
+}
+.inf_blocks {
+  text-align: center;
+  display: block;
+}
+.inf_blocks a {
+  margin-bottom: 1em;
+}
+.mail{
+  align-content: flex-start;
+}
+.mail p {
+  display: block;
+}
+.mail input{
+  display: block;
 }
     </style>
   </head>
@@ -138,14 +167,14 @@ footer .inf_blocks {
       </div>
       <div class="news event">
         <h5>subdiv\<br>\sculpt</h5>
-        <a href="mini_link">выставка</a>
+        <a class="mini_link" href="">выставка</a>
       </div>
       <div class="news">
         <h5>летний фестиваль «поле зрения»</h5>
-        <a href="mini_link">билеты</a>
+        <a class="mini_link" href="">билеты</a>
       </div>
       <div class="wallpaper">
-        <a href="mini_link">обои</a>
+        <a class="mini_link" href="">обои</a>
       </div>
       <div class="unity">
         <h5>здесь и сейчас</h5>
@@ -176,7 +205,7 @@ footer .inf_blocks {
   </p>
 </div>
 <div class="inf_blocks">
-    <a href="#">instagram</a>
+    <a href="#">instagram</a> <br>
     <a href="#">facebook</a>
 
 </div>
