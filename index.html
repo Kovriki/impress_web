@@ -5,84 +5,189 @@
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <style media="screen">
+main{
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 1fr;;
+}
+.news{
+  width: 25vw;
+  height: 20em;
+  border-right: solid 1px black;
+  border-bottom:solid 1px black;
+  box-sizing: border-box;
+position: relative;
+box-sizing: border-box;
 
-@font-face {
-  font-family: "Pragmatica_Italic";
-  src: url('fonts/Pragmatica_ital.otf')
 }
-@font-face {
-  font-family: "Pragmatica_Regular";
-  src: url('fonts/Pragmatica_reg.otf')
+.wallpaper{
+  width: 25vw;
+  height: 40em;
+  border-right: solid 1px black;
+  border-bottom:solid 1px black;
+  box-sizing: border-box;
+  grid-area: 1/4/3/5;
 }
-@font-face {
+.unity{
+  width: 75vw;
+  height: 20em;
+  border-right: solid 1px black;
+  border-bottom:solid 1px black;
+  box-sizing: border-box;
+  grid-area: 2/1/3/4;
+}
+main{
+  font-size: 1em;
+  box-sizing: border-box;
+
+}
+
+h5{
   font-family: "Pragmatica_Bold";
-  src: url('fonts/Pragmatica_bold.otf')
+  font-size: 2.8em;
+  text-align: center;
+  margin: 0.5em;
 }
-
-body{
-  font-family: "Pragmatica_Regular";
+p{
+    font-family: "Pragmatica_Regular";
+    margin-bottom: 0.5em;
+    text-align: center;
+    vertical-align: bottom;
+    display: inline-grid;
+    align-items: flex-end;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
-        nav{
-          width: 100vw;
-          height: 144px;
-          display: grid;
-          font-family: "Pragmatica_Italic";
-          box-sizing: border-box;
-          grid-template-rows: 2;
-          grid-template-columns: repeat(8, 1fr);
+.text{
+  align-items: flex-end;
+}
+main div {
+  text-align: center;
+text-decoration: none;
+align-items: flex-end;
+color: black;
+padding: 1em;
+}
+.event{
+  box-sizing: border-box;
+  /* outline: 1.5em solid #E0E2D0; */
+}
+.news .mini_link{
+  position: absolute;
+  bottom: 0;
+}
+.wallpaper{
+  background-image: url("images/katalog/03.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 236%;
+}
+.unity p {
+  padding-left: 10em;
+  padding-right:  10em;
+}
+.questions{
+width: 100vw;
+height: 1em;
+display: inline-grid;
+font-family: "Pragmatica_Bold";
+font-size: 2.8em;
+/* border-right: solid 1px black; */
+border-bottom:solid 1px black;
+grid-area: 3/1/4/9;
+align-items: center;
+color: white;
+text-shadow: black 1px 1px 0, black -1px -1px 0,
+             black -1px 1px 0, black 1px -1px 0;
+}
+footer{
+  width: 100vw;
+  height: 25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr, 1fr;
+  box-sizing: border-box;
+}
+footer .mail {
+  width: 100vw;
+  height: 10em;
+  grid-area: 1/1/2/5;
+}
+footer .inf_blocks {
+  width: 25vw;
+  height: 10em;
 
-
-        }
-        a{
-
-          height: 72px;
-          box-sizing: border-box;
-          display: inline-grid;
-          border-right: solid 1px black;
-          border-bottom:solid 1px black;
-          /* align-items:  center; */
-          text-align: center;
-          text-decoration: none;
-          align-items: center;
-        }
-        #s1{
-          height: 144px;
-          grid-area: 1/1/3/3;
-        }
-        #s2{ grid-area:1/3/2/6; }
-        #s3{ grid-area:1/5/2/9; }
-        #s4{ grid-area:2/3/3/5; }
-        #s5{ grid-area:2/5/3/7; }
-        #s6{ grid-area:2/7/3/9; }
-
-
-       #s1, #s4, #s5, #s6{
-          /* width: 1fr; */
-          width: 25vw;
-       }
-        /* #s4{ grid-area: 2/2/3/3} */
-
-       }
-       #s2,#s3{
-         /* width: 1fr; */
-         width: 37.5vw;
-
-       }
-
+}
     </style>
   </head>
   <body>
     <nav>
-
-        <a id="s1" href="index.html">impress</a>
+        <a id="s1" href="index.html"></a>
         <a  id="s2" href="#">посещение</a>
         <a id="s3"  href="#">афиша</a>
           <a id="s4"  href="events.html">события</a>
           <a id="s5"  href="#">магазин</a>
           <a id="s6"  href="#">о музее</a>
-
-
     </nav>
+    <main>
+        <div class="news">
+        <h5>о музее</h5>
+        <p>Impress* — первый музей шрифтовых иллюзий, спроектированный под руководством дизайнеров. </p>
+      </div>
+      <div class="news event">
+        <h5>subdiv\<br>\sculpt</h5>
+        <a href="mini_link">выставка</a>
+      </div>
+      <div class="news">
+        <h5>летний фестиваль «поле зрения»</h5>
+        <a href="mini_link">билеты</a>
+      </div>
+      <div class="wallpaper">
+        <a href="mini_link">обои</a>
+      </div>
+      <div class="unity">
+        <h5>здесь и сейчас</h5>
+          <p>Возможности музея выходят на новый уровень и покоряют новые миры.
+              Открывается доступ к новой выставке, которую сможет посетить каждый из своего дома</p>
+      </div>
+      <div class="questions"><h6> Кто мы? Откуда мы пришли? Куда мы идём?</h6><div>
+    </main>
+    <footer>
+
+<div class="mail">
+    <p>Подписаться на рассылку</p>
+    <input type="email" name="email" value="tellyourname@gmail.com">
+    <button type="button" name="arrow"></button>
+</div>
+<div class="inf_blocks">
+  <p>
+  часы работы:<br>
+  пн-пт: 9:00 – 22:00 <br>
+  сб-вс: 10:00 – 00:00 <br>
+  </p>
+</div>
+<div class="inf_blocks">
+  <p>
+  +7 (945) 344 34 34 <br>
+  Малая Пионерская 12 <br>
+  musimpress.com <br>
+  </p>
+</div>
+<div class="inf_blocks">
+    <a href="#">instagram</a>
+    <a href="#">facebook</a>
+
+</div>
+<div class="inf_blocks">
+  <p>
+    pepsiburger <br>
+    hse adc
+</p>
+</div>
+
+    </footer>
 
   </body>
 </html>
