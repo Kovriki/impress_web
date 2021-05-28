@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- <link rel="stylesheet" href="/css/master.css"> -->
+    <style media="screen">
+
+    .btn1{
+      width: 50px;
+      height: 50px;
+      background-color: #040404;
+      border-radius: 25%;
+      position:relative;
+      display: inline-block;
+      /* margin-top: 40vw; */
+      justify-content: center;
+      align-content: center;
+    }
+    .btn2{
+      width: 50px;
+      height: 50px;
+      background-color: #040404;
+      border-radius: 25%;
+      position:relative;
+      display: inline-block;
+      /* margin-left: 90vw; */
+      justify-content: center;
+      align-content: center;}
+      a {
+        width: 50px;
+        height: 50px;
+        color: white;
+        text-align: center;
+        display: inline-block;
+      }
+
+
+input{
+  width: 0;
+  height: 0;
+}
+.vp{
+  width: 100%;
+  height: 100%;
+}
+.duck {
+  width: 383px;
+  height: 480px;
+  /* background: url(https://raw.githubusercontent.com/Kovriki/holidays-work/0b9f575b011f3d42e21f66cb81d07be9f41c40db/images/duckscript.svg); */
+  background: url(https://raw.githubusercontent.com/Kovriki/holidays-work/290733634bc2b9d9549dc9a4359a7b8e0ad9aabb/images/duck-stringsteps.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+
+animation: duck_walk 1s steps(14) infinite paused;
+}
+@keyframes duck_walk {
+  0% {background-position: left 0 top 0;}
+  100% {background-position: left 100%  top 0;}
+}
+.vp label {
+display: flex;
+width: 100px;
+height: 50px;
+font-size: 30px;
+margin: 20px;
+background: orange;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+
+}
+.vp input[type="checkbox"]:checked ~ .duck {
+animation-play-state: running;
+}
+.vp input[type="checkbox"]:checked ~ label{
+  border: 1px solid red;
+}
+
+    </style>
+  </head>
+  <body>
+  <p>доберусь ли я до сюда??</p>
+  <a href="index.html"><div class="btn2"><p>1</p></div></a>
+  <a href="zadanie-2.html"><div class="btn1"><p>2</p></div></a>
+  <div class="vp">
+
+      <input type="checkbox" id="btn">
+      <label for="btn">btn</label>
+      <div class="duck"></div>
+      <audio id="music" loop="loop" src="https://youtu.be/DbuebKNKQsQ"></audio>
+  </div>
+  </body>
+</html>
