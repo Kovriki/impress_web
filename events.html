@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="javascript/jQuere.3.5.1.js"></script>
     <style media="screen">
     main{
     }
@@ -61,12 +63,24 @@
             flex-flow: wrap row;
       }
 
+      .event_box > .image_box {
+        background-position: -30vw;
+      }
+
+
       #s4{ font-family: "Pragmatica_Bold"}
 
       .p1 .cover {order:2;}
-      #night_01 {background-image: url("images/posters/night_01_n.png"); }
-      #night_02 {background-image: url("images/posters/night_02_n.png"); order:1;}
-      #night_03 {background-image: url("images/posters/night_03_n.png"); order:3;}
+      #night_01 {background-image: url("images/posters/night_01_n.png");
+      /* animation: slide 1s ease; */
+
+     }
+      #night_02 {background-image: url("images/posters/night_02_n.png"); order:1;
+      /* animation: slide 1s ease; */
+    }
+      #night_03 {background-image: url("images/posters/night_03_n.png"); order:3;
+      /* animation: slide 1s ease; */
+    }
       .p2 .cover {order:1;}
       #pole_01 {background-image: url("images/posters/pole_01.png");}
       #pole_02 {background-image: url("images/posters/pole_02.png"); order:2;}
@@ -99,15 +113,49 @@
       .p4 {}
       .p5 {}
 
-        @media only screen and (min-width: 1024px) and (max-width: 1400px) {
 
-
-          
+      @keyframes slide {
+        0%{display: none;
+          background-position: -25vw;
         }
+        1%{display: block;
+          background-position: -25vw;
 
+        }
+        100%{
+          background-position: 100%;
 
+        }
+      }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      /* iPad Portrait */
+      .quarter, .quarter_transparent {width: 12.5vw; height: 12.5vw;}
+      .string { width: 100vw; height: 12.5vw;}
+      .zigzag_block_h, .zigzag_block_horizont, .zigzag_horizont, .infor_h  , .text_prostranstvo{ width: 37.5vw; height: 25vw ;font-size: 18px; }
+      .zigzag_block, .zigzag, .infor { width: 25vw; height: 37.5vw;font-size: 18px;}
+      .restangle_under_logo {width: 25vw; height: 12.5vw; background: black;}
+
+        /* .string { width: 100vw; height: 12.5vw;}
+      .quarter, .quarter_transparent {width: 12.5vw; height: 12.5vw;} */
+      .infor, .infor_h {}
+      .footer_3, .footer_4, .footer_5,   #s1, #s2,#s4_1 , #s5{display: none;}
+      /* .text_prostranstvo{width: 30vw;} */
+    }
+      .anim {
+        animation: slide 1s ease;
+      }
     </style>
     <script type="text/javascript">
+      $(document).ready(function(){
+        $(".cover").click(function(){
+          $(".image_box").addClass("anim");
+
+          })
+        })
+
+
+
+
 
     </script>
   </head>
@@ -136,7 +184,7 @@
       </div>
 
       <div class="image_box" id="night_02"></div>
-      <div class="image_box" id="night_03"></div>
+      <div class="image_box " id="night_03"></div>
       </div>
 
     <div class="event_box p2">
