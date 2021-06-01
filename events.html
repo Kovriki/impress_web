@@ -37,12 +37,13 @@
         border-top: none;
         border-bottom: none;
         box-sizing: border-box;
-        align-content: center;
         justify-content: center;
         font-family: "Pragmatica_Bold";
         font-size: 1.2em;
         color:black;
         box-sizing: border-box;
+        flex-direction: column;
+        text-decoration: none;
         /* align-content:  flex-start; */
       }
       .image_box {
@@ -62,36 +63,45 @@
 
       #s4{ font-family: "Pragmatica_Bold"}
 
-      #night_01 {background-image: url("images/posters/night_01_n.png");}
-      #night_02 {background-image: url("images/posters/night_02_n.png");}
-      #night_03 {background-image: url("images/posters/night_03_n.png");}
-
+      .p1 .cover {order:2;}
+      #night_01 {background-image: url("images/posters/night_01_n.png"); }
+      #night_02 {background-image: url("images/posters/night_02_n.png"); order:1;}
+      #night_03 {background-image: url("images/posters/night_03_n.png"); order:3;}
+      .p2 .cover {order:1;}
       #pole_01 {background-image: url("images/posters/pole_01.png");}
-      #pole_02 {background-image: url("images/posters/pole_02.png");
-      /* transform: rotate(90deg); */
-      /* order: 4 */
-    }
-      #pole_03 {background-image: url("images/posters/pole_03.png");}
-      #pole_04 {background-image: url("images/posters/pole_04.png");}
-      #pole_05 {background-image: url("images/posters/pole_05.png");}
-      #pole_06 {background-image: url("images/posters/pole_06.png");}
-
+      #pole_02 {background-image: url("images/posters/pole_02.png"); order:2;}
+      #pole_03 {background-image: url("images/posters/pole_03.png"); order:3;}
+      #pole_04 {background-image: url("images/posters/pole_04.png"); order:4;}
+      #pole_05 {background-image: url("images/posters/pole_05.png"); order:5;}
+      #pole_06 {background-image: url("images/posters/pole_06.png"); order:6;}
+      .p3 .cover {order:2;}
       #open_01 {background-image: url("images/posters/open_01.png");}
-      #open_02 {background-image: url("images/posters/open_02.png");}
-      #open_03 {background-image: url("images/posters/open_03.png");}
-
+      #open_02 {background-image: url("images/posters/open_02.png"); order:1;}
+      #open_03 {background-image: url("images/posters/open_03.png"); order:3;}
+      .p4 .cover {order:4;}
+      .p4 .cover .event_link{border-top: 1px solid black;}
       #fonts_01 {background-image: url("images/posters/fonts_01.png");}
-      #fonts_02 {background-image: url("images/posters/fonts_02.png");}
-      #fonts_03 {background-image: url("images/posters/fonts_03.png");}
-      #fonts_04 {background-image: url("images/posters/fonts_04.png");}
-      #fonts_05 {background-image: url("images/posters/fonts_05.png");}
-      #fonts_06 {background-image: url("images/posters/fonts_06.png");}
-
-      #winter_01 {background-image: url("images/posters/winter_01.png");}
+      #fonts_02 {background-image: url("images/posters/fonts_02.png"); order:1;}
+      #fonts_03 {background-image: url("images/posters/fonts_03.png"); order:3;}
+      #fonts_04 {background-image: url("images/posters/fonts_04.png"); order:2;}
+      #fonts_05 {background-image: url("images/posters/fonts_05.png"); order:5;}
+      #fonts_06 {background-image: url("images/posters/fonts_06.png"); order:6;}
+      .p5 .cover {order:3;}
+      .p5 .cover .event_link{border-top: 1px solid black;}
+      #winter_01 {background-image: url("images/posters/winter_01.png"); order:4;}
       #winter_02 {background-image: url("images/posters/winter_02.png");}
-      #winter_03 {background-image: url("images/posters/winter_03.png");}
-      #winter_04 {background-image: url("images/posters/winter_04.png");}
+      #winter_03 {background-image: url("images/posters/winter_03.png"); order:2;}
+      #winter_04 {background-image: url("images/posters/winter_04.png"); order:1;}
 
+      .p1 {}
+      .p2 {}
+      .p3 {}
+      .p4 {}
+      .p5 {}
+
+      @media query {
+
+      }
 
     </style>
     <script type="text/javascript">
@@ -116,7 +126,7 @@
 
 
 
-    <div class="event_box">
+    <div class="event_box p1">
       <div class="cover">
         <a class="event_link" href="#">ночная джуси туса</a>
         <div class="image_box" id="night_01"></div>
@@ -126,7 +136,7 @@
       <div class="image_box" id="night_03"></div>
       </div>
 
-    <div class="event_box">
+    <div class="event_box p2">
       <div class="cover">
         <a class="event_link" href="#">“поле зрения” — летний фестиваль</a>
         <div class="image_box" id="pole_01"></div>
@@ -139,21 +149,21 @@
     </div>
 
 
-    <div class="event_box">
+    <div class="event_box p3">
       <div class="cover">
         <a class="event_link" href="#">открытие нового павильона</a>
-        <div class="image_box" id="open_01"></div>
+        <div class="image_box" id="open_02"></div>
       </div>
 
-      <div class="image_box" id="open_02"></div>
+      <div class="image_box" id="open_01"></div>
       <div class="image_box" id="open_03"></div>
       </div>
 
 
 
-    <div class="event_box">
+    <div class="event_box p4">
       <div class="cover">
-        <a class="event_link" href="#">“поле зрения” — летний фестиваль</a>
+        <a class="event_link" href="#">конкурс пиктограмм</a>
         <div class="image_box" id="fonts_01"></div>
       </div>
       <div class="image_box" id="fonts_02"></div>
@@ -163,13 +173,13 @@
       <div class="image_box" id="fonts_06"></div>
     </div>
 
-    <div class="event_box">
+    <div class="event_box p5">
       <div class="cover">
-        <a class="event_link" href="#">открытие нового павильона</a>
-        <div class="image_box" id="winter_01"></div>
+        <a class="event_link" href="#">зимняя афиша</a>
+        <div class="image_box" id="winter_02"></div>
       </div>
 
-      <div class="image_box" id="winter_02"></div>
+      <div class="image_box" id="winter_01"></div>
       <div class="image_box" id="winter_03"></div>
       <div class="image_box" id="winter_04"></div>
       </div>
