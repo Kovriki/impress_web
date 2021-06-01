@@ -5,6 +5,91 @@
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <style media="screen">
+    main{
+    }
+    .events{
+      width: 100vw;
+      height: auto;
+      display: inline-flex;
+      flex-direction: row;
+          flex-flow: row wrap;
+    }
+      .event_box{
+        width: auto;
+        height: auto;
+        display: flex;
+        /* border: 1px solid black; */
+        box-sizing: border-box;
+        align-content: center;
+        /* justify-content: center; */
+        flex-flow: wrap row;
+
+      }
+      .cover{
+        width: auto;
+        height: auto;
+      }
+      .event_link{
+        width: 25vw;
+        height:3em;
+        display: flex;
+        border: 1px solid black;
+        box-sizing: border-box;
+        align-content: center;
+        justify-content: center;
+        font-family: "Pragmatica_Bold";
+        font-size: 1.2em;
+        color:black;
+        box-sizing: border-box;
+        /* align-content:  flex-start; */
+      }
+      .image_box {
+        width: 25vw;
+        display: flex;
+        height: calc(25vw * 1.5);
+        /* background-image: ; */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+            flex-flow: wrap row;
+      }
+
+      #s4{ font-family: "Pragmatica_Bold"}
+
+      #night_01 {background-image: url("images/posters/night_01.png");}
+      #night_02 {background-image: url("images/posters/night_02.png");}
+      #night_03 {background-image: url("images/posters/night_03.png");}
+
+      #pole_01 {background-image: url("images/posters/pole_01.png");}
+      #pole_02 {background-image: url("images/posters/pole_02.png");
+      /* transform: rotate(90deg); */
+      /* order: 4 */
+    }
+      #pole_03 {background-image: url("images/posters/pole_03.png");}
+      #pole_04 {background-image: url("images/posters/pole_04.png");}
+      #pole_05 {background-image: url("images/posters/pole_05.png");}
+      #pole_06 {background-image: url("images/posters/pole_06.png");}
+
+      #open_01 {background-image: url("images/posters/open_01.png");}
+      #open_02 {background-image: url("images/posters/open_02.png");}
+      #open_03 {background-image: url("images/posters/open_03.png");}
+
+      #fonts_01 {background-image: url("images/posters/fonts_01.png");}
+      #fonts_02 {background-image: url("images/posters/fonts_02.png");}
+      #fonts_03 {background-image: url("images/posters/fonts_03.png");}
+      #fonts_04 {background-image: url("images/posters/fonts_04.png");}
+      #fonts_05 {background-image: url("images/posters/fonts_05.png");}
+      #fonts_06 {background-image: url("images/posters/fonts_06.png");}
+
+      #winter_01 {background-image: url("images/posters/winter_01.png");}
+      #winter_02 {background-image: url("images/posters/winter_02.png");}
+      #winter_03 {background-image: url("images/posters/winter_03.png");}
+      #winter_04 {background-image: url("images/posters/winter_04.png");}
+
 
     </style>
     <script type="text/javascript">
@@ -22,6 +107,74 @@
     </nav>
 
     <main>
+
+<div class="events">
+
+
+
+
+
+    <div class="event_box">
+      <div class="cover">
+        <a class="event_link" href="#">ночная джуси туса</a>
+        <div class="image_box" id="night_01"></div>
+      </div>
+
+      <div class="image_box" id="night_02"></div>
+      <div class="image_box" id="night_03"></div>
+      </div>
+
+    <div class="event_box">
+      <div class="cover">
+        <a class="event_link" href="#">“поле зрения” — летний фестиваль</a>
+        <div class="image_box" id="pole_01"></div>
+      </div>
+      <div class="image_box" id="pole_02"></div>
+      <div class="image_box" id="pole_03"></div>
+      <div class="image_box" id="pole_04"></div>
+      <div class="image_box" id="pole_05"></div>
+      <div class="image_box" id="pole_06"></div>
+    </div>
+
+
+    <div class="event_box">
+      <div class="cover">
+        <a class="event_link" href="#">открытие нового павильона</a>
+        <div class="image_box" id="open_01"></div>
+      </div>
+
+      <div class="image_box" id="open_02"></div>
+      <div class="image_box" id="open_03"></div>
+      </div>
+
+
+
+    <div class="event_box">
+      <div class="cover">
+        <a class="event_link" href="#">“поле зрения” — летний фестиваль</a>
+        <div class="image_box" id="fonts_01"></div>
+      </div>
+      <div class="image_box" id="fonts_02"></div>
+      <div class="image_box" id="fonts_03"></div>
+      <div class="image_box" id="fonts_04"></div>
+      <div class="image_box" id="fonts_05"></div>
+      <div class="image_box" id="fonts_06"></div>
+    </div>
+
+    <div class="event_box">
+      <div class="cover">
+        <a class="event_link" href="#">открытие нового павильона</a>
+        <div class="image_box" id="winter_01"></div>
+      </div>
+
+      <div class="image_box" id="winter_02"></div>
+      <div class="image_box" id="winter_03"></div>
+      <div class="image_box" id="winter_04"></div>
+      </div>
+
+
+
+
 
     </main>
     <footer>
