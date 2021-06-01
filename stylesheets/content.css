@@ -171,6 +171,7 @@ _ __ ___   __ _ _ _ __
          background-position: center;
          background-repeat: no-repeat;
          background-size: 236%;
+         position: relative;
        }
        .unity p {
          padding-left: 10em;
@@ -192,6 +193,14 @@ _ __ ___   __ _ _ _ __
        .mini_link{
          font-size: 1em;
          color: #C4C4C4;
+         display: block;
+         vertical-align: bottom;
+         bottom: 2em;
+         width: 100%;
+       }
+       .wallpaper .mini_link{
+         display: block;
+        position: absolute;
        }
 /*
        __            _
@@ -256,9 +265,14 @@ _ __ ___   __ _ _ _ __
          text-align: start;
          margin-left: 12.5vw;
          vertical-align: middle;
-             color: #c4c4c4;
+             color: black;
 
        }
+       .mail placeholder {
+         font-family: "Pragmatica_Regular";
+         color: #c4c4c4;
+       }
+
        .mail button {
          cursor: pointer;
          display: inline-block;
