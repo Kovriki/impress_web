@@ -66,7 +66,17 @@
       .event_box > .image_box {
         background-position: -30vw;
       }
-
+      @keyframes pulsar {
+        0%{
+          background-size: 100%;
+        }
+        100%{
+          background-size: 98%;
+        }
+      }
+      .p1 .cover .image_box{
+        /* animation: pulsar 1s ease-in  infinite alternate; */
+      }
 
       #s4{ font-family: "Pragmatica_Bold"}
 
@@ -130,7 +140,16 @@
       }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
       /* iPad Portrait */
-
+    .image_box{
+      width: 33.3vw;
+      height: 50.1vw;
+    }
+    .event_link{
+      width: 33.3vw;
+    }
+    .event_box > .image_box {
+      background-position: -40vw;
+    }
 
 
     }
