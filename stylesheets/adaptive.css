@@ -104,3 +104,36 @@
       grid-area: 1/3/2/4;
     }
 }
+@media only screen and (max-width: 768px) {
+  body{
+    font-size: 1.3em;
+  }
+  .index{
+    grid-template-columns:  1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr auto;
+  }
+  .news, .wallpaper, .fest,  .unity {
+    width: 100vw;
+    height: 25em;
+  }
+  .wallpaper{
+    grid-area: 2/1/3/2;
+  }
+  .fest{
+    grid-area: 2/1/4/2;
+  }
+  .event{
+    grid-area: 2/1/3/2;
+  }
+  .unity {
+    grid-area: 3/1/4/3;
+  }
+  .unity p, .news p {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .questions{
+    grid-area: 4/1/5/3;
+    overflow: hidden;
+}
+}
