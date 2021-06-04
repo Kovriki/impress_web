@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -113,14 +113,15 @@
       .p4 {}
       .p5 {}
 
-
+      .bg_100{
+        background-position: 100%;
+      }
       @keyframes slide {
         0%{display: none;
           background-position: -25vw;
         }
         1%{display: block;
           background-position: -25vw;
-
         }
         100%{
           background-position: 100%;
@@ -129,17 +130,9 @@
       }
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
       /* iPad Portrait */
-      .quarter, .quarter_transparent {width: 12.5vw; height: 12.5vw;}
-      .string { width: 100vw; height: 12.5vw;}
-      .zigzag_block_h, .zigzag_block_horizont, .zigzag_horizont, .infor_h  , .text_prostranstvo{ width: 37.5vw; height: 25vw ;font-size: 18px; }
-      .zigzag_block, .zigzag, .infor { width: 25vw; height: 37.5vw;font-size: 18px;}
-      .restangle_under_logo {width: 25vw; height: 12.5vw; background: black;}
 
-        /* .string { width: 100vw; height: 12.5vw;}
-      .quarter, .quarter_transparent {width: 12.5vw; height: 12.5vw;} */
-      .infor, .infor_h {}
-      .footer_3, .footer_4, .footer_5,   #s1, #s2,#s4_1 , #s5{display: none;}
-      /* .text_prostranstvo{width: 30vw;} */
+
+
     }
       .anim {
         animation: slide 1s ease;
@@ -148,14 +141,13 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $(".cover").click(function(){
-          $(".image_box").addClass("anim");
-          setTimeout(function(){
-            css background-position: 100%;
-            css
-          })
+          $(this).siblings(".image_box").addClass("anim");
 
-          })
+          setTimeout(function(){
+            $(this).siblings(".image_box").addClass("bg_100");
+          }, 500);
         })
+      })
 
 
 

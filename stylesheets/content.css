@@ -1,4 +1,6 @@
-
+body{
+  /* overflow: hidden; */
+}
 @font-face {
   font-family: "Pragmatica_Italic";
   src: url('../fonts/Pragmatica_ital.otf')
@@ -77,6 +79,8 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
        }
 
 
+
+
 /*     _
       (_)
 _ __ ___   __ _ _ _ __
@@ -108,6 +112,7 @@ _ __ ___   __ _ _ _ __
          box-sizing: border-box;
        position: relative;
        box-sizing: border-box;
+       align-items: flex-end;
 
        }
        .wallpaper{
@@ -158,15 +163,14 @@ _ __ ___   __ _ _ _ __
          box-sizing: border-box;
          /* outline: 1.5em solid #E0E2D0; */
        }
-       .news{
-         align-items: flex-end;
-       }
+
        .news .mini_link{
          position: absolute;
          margin-bottom:
          /* bottom: 0; */
        }
        .wallpaper{
+         background-color: black;
          background-image: url("../images/katalog/03.png");
          background-position: center;
          background-repeat: no-repeat;
