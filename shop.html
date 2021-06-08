@@ -44,24 +44,38 @@
         flex-wrap: wrap;
         flex-direction: row;
       }
-      .gradient_h {
+      /* .gradient_h {
         background: rgb(255,255,255);
         background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
         background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
         background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
         opacity: 0;
         transition: .4s;
-            }
+            } */
       .product_card:hover{
 
             }
       .photo{
         width: 100%;
         height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
       }
 
+    #e_1{background-image: url("images/shop/product_10.png");}
+    #e_2{background-image: url("images/shop/product_09.png");}
+    #e_3{background-image: url("images/shop/product_08.png");}
+    #e_4{background-image: url("images/shop/product_07.png");}
 
+    #s_1{background-image: url("images/shop/product_01.png");}
+    #s_2{background-image: url("images/shop/product_06.png");}
+
+    #a_1{background-image: url("images/shop/product_05.png");}
+    #a_2{background-image: url("images/shop/product_02.png");}
+    #a_3{background-image: url("images/shop/product_03.png");}
+    #a_4{background-image: url("images/shop/product_04.png");}
 
 
 
@@ -85,29 +99,50 @@
       <div class="product_category">
         <div class="category_name">экспонаты</div>
         <div class="products">
-          <div class="product_card">
-            <div class="gradient_h">
-            </div>
-            <div class="photo"></div>
+          <div class="product_card gradient_h">
+            <div id="e_1" class="photo"></div>
           </div>
-          <div class="product_card">
-            <div class="gradient_h">
-            </div>
-            <div class="photo"></div>
+          <div class="product_card gradient_h">
+            <div id="e_2" class="photo"></div>
           </div>
-          <div class="product_card">
-            <div class="gradient_h">
-            </div>
-            <div class="photo"></div>
+          <div class="product_card gradient_h">
+            <div id="e_3" class="photo"></div>
           </div>
-          <div class="product_card">
-            <div class="gradient_h">
-            </div>
-            <div class="photo"></div>
+          <div class="product_card gradient_h">
+            <div id="e_4" class="photo"></div>
           </div>
         </div>
       </div>
 
+      <div class="product_category">
+        <div class="category_name">одежда</div>
+        <div class="products">
+          <div class="product_card gradient_h">
+            <div id="s_1" class="photo"></div>
+          </div>
+          <div class="product_card gradient_h">
+            <div id="s_2" class="photo"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product_category">
+        <div class="category_name">аксессуары</div>
+        <div class="products">
+          <div class="product_card gradient_h">
+            <div id="a_1" class="photo"></div>
+          </div>
+          <div class="product_card gradient_h">
+            <div id="a_2" class="photo"></div>
+          </div>
+          <div class="product_card gradient_h">
+            <div id="a_3" class="photo"></div>
+          </div>
+          <div class="product_card gradient_h">
+            <div id="a_4" class="photo"></div>
+          </div>
+        </div>
+      </div>
 
 
 

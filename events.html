@@ -155,6 +155,7 @@
     }
       .anim {
         animation: slide 1s ease;
+        animation-fill-mode: forwards;
       }
     </style>
     <script type="text/javascript">
@@ -162,9 +163,9 @@
         $(".cover").click(function(){
           $(this).siblings(".image_box").addClass("anim");
 
-          setTimeout(function(){
-            $(this).siblings(".image_box").addClass("bg_100");
-          }, 500);
+          // setTimeout(function(){
+          //   $(this).siblings(".image_box").addClass("bg_100");
+          // }, 500);
         })
       })
 
