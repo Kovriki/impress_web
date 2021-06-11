@@ -17,6 +17,7 @@ body{
 body{
   font-family: "Pragmatica_Regular";
   cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), pointer;
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
