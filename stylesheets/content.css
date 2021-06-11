@@ -16,6 +16,24 @@ body{
 
 body{
   font-family: "Pragmatica_Regular";
+     a { cursor: url('../images/cursor.cur'), pointer; }
+}
+
+
+
+.svg {
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.svg"), auto;
+}
+.png {
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background: black;
+  display: inline-block;
+  position: relative;
+  border: 1px solid white;
 }
 
 

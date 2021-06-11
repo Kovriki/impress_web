@@ -4,81 +4,31 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/shop.css">
     <style media="screen">
-      .product_category{
-        width: 100vw;
-        height: auto;
-        display: flex;
 
-      }
-      .product_category:nth-child(1){
-        flex-direction: column;
+    .cost{
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 49%);
+      color: black;
+      text-align: left;
+      padding-left: 1.2em;
+      padding-top: 1em;
+      line-height: 1.3em;
+      opacity: 0;
+      transition: .5s;
 
-      }
-      .products {
-        width: 100vw;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-      }
-      .category_name{
-        display: flex;
+    }
+    .product_card{
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .product_card:hover  .cost{
+      opacity: 1;
+      transition: .2s;
 
-        width: 100vw;
-        height: 72px;
-        font-family: "Pragmatica_Bold";
-        font-size: 1.2em;
-        box-sizing: border-box;
-        border-right: solid 1px black;
-        border-bottom:solid 1px black;
-        text-align: center;
-        text-decoration: none;
-        align-items: center;
-        color: black;
-      }
-      .product_card {
-        width: 25vw;
-        height: 20em;
-        background-color: gray;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-      }
-      /* .gradient_h {
-        background: rgb(255,255,255);
-        background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
-        background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
-        background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 32%);
-        opacity: 0;
-        transition: .4s;
-            } */
-      .product_card:hover{
-
-            }
-      .photo{
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-      }
-
-    #e_1{background-image: url("images/shop/product_10.png");}
-    #e_2{background-image: url("images/shop/product_09.png");}
-    #e_3{background-image: url("images/shop/product_08.png");}
-    #e_4{background-image: url("images/shop/product_07.png");}
-
-    #s_1{background-image: url("images/shop/product_01.png");}
-    #s_2{background-image: url("images/shop/product_06.png");}
-
-    #a_1{background-image: url("images/shop/product_05.png");}
-    #a_2{background-image: url("images/shop/product_02.png");}
-    #a_3{background-image: url("images/shop/product_03.png");}
-    #a_4{background-image: url("images/shop/product_04.png");}
-
-
-
+    }
     </style>
     <script type="text/javascript">
 
@@ -87,7 +37,7 @@
   <body>
     <nav>
         <a id="s1" href="index.html"></a>
-        <a  id="s2" href="visiting.html">посещение</a>
+        <a id="s2" href="visiting.html">посещение</a>
         <a id="s3"  href="afisha.html">афиша</a>
         <a id="s4"  href="events.html">события</a>
         <a id="s5"  class="this_p"  href="shop.html">магазин</a>
@@ -100,16 +50,24 @@
         <div class="category_name">экспонаты</div>
         <div class="products">
           <div class="product_card gradient_h">
-            <div id="e_1" class="photo"></div>
+            <div id="e_1" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="e_2" class="photo"></div>
+            <div id="e_2" class="photo">
+            <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="e_3" class="photo"></div>
+            <div id="e_3" class="photo">
+            <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="e_4" class="photo"></div>
+            <div id="e_4" class="photo">
+            <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
         </div>
       </div>
@@ -118,10 +76,14 @@
         <div class="category_name">одежда</div>
         <div class="products">
           <div class="product_card gradient_h">
-            <div id="s_1" class="photo"></div>
+            <div id="s_1" class="photo">
+            <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="s_2" class="photo"></div>
+            <div id="s_2" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
         </div>
       </div>
@@ -130,16 +92,24 @@
         <div class="category_name">аксессуары</div>
         <div class="products">
           <div class="product_card gradient_h">
-            <div id="a_1" class="photo"></div>
+            <div id="a_1" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="a_2" class="photo"></div>
+            <div id="a_2" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="a_3" class="photo"></div>
+            <div id="a_3" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
           <div class="product_card gradient_h">
-            <div id="a_4" class="photo"></div>
+            <div id="a_4" class="photo">
+              <div class="cost">статуэтка «Е»<br>1200р</div>
+            </div>
           </div>
         </div>
       </div>
