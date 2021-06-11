@@ -16,7 +16,7 @@ body{
 
 body{
   font-family: "Pragmatica_Regular";
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/f53e8cb709d239f9f59012f3dd98e209398225c6/images/cursor.svg"), auto;
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
@@ -24,19 +24,12 @@ body{
 
 
 .svg {
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/f53e8cb709d239f9f59012f3dd98e209398225c6/images/cursor.svg"), auto;
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
 }
 .png {
   cursor: url("https://github.com/Kovriki/impress_web/blob/main/images/cursor.png?raw=true"), auto;
 }
-/* .box {
-  width: 100px;
-  height: 100px;
-  background: black;
-  display: inline-block;
-  position: relative;
-  border: 1px solid white;
-} */
+
 
 
 /*
