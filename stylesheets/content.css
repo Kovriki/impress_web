@@ -17,11 +17,14 @@ body{
 body{
   font-family: "Pragmatica_Regular";
   cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), pointer;
+  /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), pointer; */
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
+a,button{
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), pointer;
 
+}
 
 
 .svg {
