@@ -16,25 +16,27 @@ body{
 
 body{
   font-family: "Pragmatica_Regular";
-     a { cursor: url('../images/cursor.cur'), pointer; }
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/f53e8cb709d239f9f59012f3dd98e209398225c6/images/cursor.svg"), auto;
+     /* a { cursor: url('../images/cursor.cur'), pointer; } */
+
 }
 
 
 
 .svg {
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.svg"), auto;
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/f53e8cb709d239f9f59012f3dd98e209398225c6/images/cursor.svg"), auto;
 }
 .png {
-  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto;
+  cursor: url("https://github.com/Kovriki/impress_web/blob/main/images/cursor.png?raw=true"), auto;
 }
-.box {
+/* .box {
   width: 100px;
   height: 100px;
   background: black;
   display: inline-block;
   position: relative;
   border: 1px solid white;
-}
+} */
 
 
 /*
