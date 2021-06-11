@@ -21,8 +21,11 @@ body{
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
-a,button{
+a, .mail button{
   cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), pointer;
+}
+input {
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), text;
 
 }
 
