@@ -5,144 +5,69 @@
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <style media="screen">
-  .frst_part{
-    width: 100vw;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: flex-start;
-    box-sizing: border-box;
+    main {
+      display: flex;
+      flex-direction:
     }
-    .scnd_part{
-      width: 100vw;
-      height: auto;
-      border: 1px solid black;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      grid-template-rows: 1fr,1fr;
-    }
-.video_cont{
-  width: 50vw;
-  height: auto;
-  color: black;
-  text-align: center;
-  font-family: "Pragmatica_reg";
-  grid-column-start: 2;
-  border-left: solid 1px black;
-  border-right: solid 1px black;
-  /* box-sizing: border-box; */
-  }
-    .video{
-      align-items: center;
-      width: 50vw;
-      height: 30rem;
-    }
-    .museum_info{
-      /* display: grid; */
-      /* grid-template-columns: repeat(1fr, 2fr, 1fr); */
-    }
-    .video_cont p {
-          margin: 3em;
-          font-family: "Pragmatica_Regular";
-          font-size: 1.2em;
-          line-height: 1.5em;
-    }
-    .scnd_part p {
-      margin: 3em;
-      font-family: "Pragmatica_Regular";
-      font-size: 1.2em;
-      line-height: 1.5em;
-      grid-area: 1/2/2/4;
-    }
-    .photo_cont {
-      display: inline-grid;
-      width: 25vw;
-      height: 25vw;
-      border:1px solid black;
-      border-right: none;
-      border-bottom: none;
-      grid-row-start: 2;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-    /* img {width: 30vw;
-    height: auto;} */
-    .all_1{
-      width: 100%;
-      height: 100%;
-      background-image: url("images/museum_info/all_1.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .all_2{
-      width: 100%;
-      height: 100%;
-      background-image: url("images/museum_info/all_2.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      .box{
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        box-sizing: border-box;
 
-    }
-    .thrd_part{
-      width: 100vw;
-      height: auto;
-      display: grid;
-      grid-template-columns: 1fr, 1fr, 1fr;
-    }
-    .floor {
+      }
+      .book{
         width: 100%;
         height: 100%;
-        align-items: center;
-        border: 1px solid black;
-        border-right: none;
-        border-top: none;
-    }
-    .f_1{
-      grid-column-start: 1;
-    }
-    .f_2{
-      grid-column-start: 2;
-    }
-    .f_3{
-      grid-column-start: 3;
-    }
-    .floor h5 {
-      margin-top: 2em;
-      margin-bottom: 1em;
-    }
-    .floor p{
-      font-family: "Pragmatica_Regular";
-      font-size: 1.2em;
-      line-height: 1.5em;
-      margin-left: 1em;
-      margin-bottom: 3em;
-    }
-    .photo_cont_2{
-      width: 100%;
-      height: 20em;
-      /* background: black; */
-      /* opacity: 0.3; */
-      position: relative;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .ph_1_1 {background-image: url("images/museum_info/f_1_1.png");}
-    .ph_1_2 {background-image: url("images/museum_info/f_1_2.png");}
-    .ph_2_1 {background-image: url("images/museum_info/f_2_1.png");}
-    .ph_2_2 {background-image: url("images/museum_info/f_2_2.png");}
-    .ph_3_1 {background-image: url("images/museum_info/f_3_1.png");}
-    .ph_3_2 {background-image: url("images/museum_info/f_3_2.png");}
-    .ph_3_3 {background-image: url("images/museum_info/f_3_3.png");}
+        background-image: url("images/museum_info/book.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
 
-    .this_p {
-      font-family: "Pragmatica_Bold";
-    }
+      }
+      .build{
+        width: 100%;
+        height: 100%;
+        background-image: url("images/museum_info/build.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+
+      }
+      .book a, .build a {
+        width: 50vw;
+        height: 100vh;
+
+      }
+      .book h5, .build h5{
+        margin-top: 25%;
+        opacity: 0;
+
+      }
+      .book h5{
+        color: white;
+      }
+      .book:hover {
+        filter: blur(.5rem);
+        cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
+        transition: .2s, all;
+      }
+      .build:hover {
+        filter: blur(.5rem);
+        cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
+        transition: .2s, all;
+      }
+      .book:hover > h5 {
+        opacity: 1;
+        /* filter: blur(0); */
+      }
+      .build:hover > h5 {
+        opacity: 1;
+        /* filter: blur(0); */
+      }
     </style>
-    <script type="text/javascript">
-
-    </script>
   </head>
   <body>
     <nav>
@@ -151,56 +76,16 @@
         <a id="s3"  href="afisha.html">афиша</a>
         <a id="s4"  href="events.html">события</a>
         <a id="s5"  href="shop.html">магазин</a>
-        <a id="s6" class="this_p"  href="museum_info.html">о музее</a>
+        <a id="s6"  href="museum_info.html">о музее</a>
     </nav>
-
     <main>
-      <div class="frst_part">
-        <div class="video_cont">
-          <iframe class="video" width="100%" height="85%" src="https://www.youtube.com/embed/T7Lnm95TK4w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p>Impress* — первый музей шрифтовых иллюзий, он&nbspобъединяет в&nbspсебе две противоположные друг другу идеи: систему и&nbspхаос, шрифт и&nbspиллюзии.
-        Здесь всё&nbspспроектировано так, чтобы вы&nbspзабыли о&nbspреальности и&nbspпогрузились в&nbspмир иллюзий.
-        </p>
-        </div>
+      <div class="box">
+        <a  class="book" href="https://www.calameo.com/read/00665320613bb4b4b2ceb"></a>
       </div>
-
-
-      <div class="scnd_part">
-        <p>Само по&nbspсебе здание состоит из&nbspпростых геометрических форм и&nbspобъёмов. музей ­— это&nbspтрехэтажное здание. Его&nbspэтажы повёрнуты по&nbsp45&nbspградусов относительно друг-друга.
-        <br><br>Главная идея самого здания ­— простор и&nbspсвобода для&nbspтворчества.</p>
-        <div class="photo_cont all_1">
-        </div>
-        <div class="photo_cont"></div>
-        <div class="photo_cont all_2">
-        </div>
-        <div class="photo_cont"></div>
-
+      <div class="box">
+          <a class="build" href="build_info.html"></a>
+          <!-- <h5>здание</h5> -->
       </div>
-
-      <div class="thrd_part">
-        <div class="floor f_1">
-            <h5>1 этаж</h5>
-            <p>На&nbspпервом этаже расположена входная группа, в&nbspкоторую входят гардероб, кафе, уборные и&nbspкасса для&nbspпокупки билетов.</p>
-            <div class="photo_cont_2 ph_1_1"></div>
-        </div>
-        <div class="floor f_2">
-            <h5>2 этаж</h5>
-            <p>Второй этаж — темное пространство с&nbspпервой частью экспозиции,* в&nbspкоторой собраны раснообразные элементы ручной работы. Кадый экспонал уникален и&nbspне&nbspимеет аналогов.</p>
-            <div class="photo_cont_2 ph_2_1"></div>
-            <div class="photo_cont_2 ph_2_2"></div>
-
-            <p class="mini_link">*подробнее с&nbspвыставкой можно ознакомиться в&nbspкаталоге</p>
-        </div>
-        <div class="floor f_3">
-            <h5>3 этаж</h5>
-            <p>На&nbspтретьем этаже расположена вторая часть выставки, а&nbspименно глифы различных наборных шрифтов.</p>
-            <div class="photo_cont_2 ph_3_1"></div>
-            <div class="photo_cont_2 ph_3_2"></div>
-            <div class="photo_cont_2 ph_3_3"></div>
-
-        </div>
-      </div>
-
 
     </main>
     <footer>
@@ -224,9 +109,9 @@
         musimpress.com <br>
         </p>
       </div>
-      <div class="inf_blocks">
-        <a href="https://www.instagram.com/j0urn_ey/">instagram</a> <br>
-        <a href="https://www.facebook.com/sugumi.su/">facebook</a>
+      <div class="inf_blocks inst">
+          <a href="https://www.instagram.com/j0urn_ey/">instagram</a> <br>
+          <a href="https://www.facebook.com/sugumi.su/">facebook</a>
       </div>
       <div class="inf_blocks">
         <p>
