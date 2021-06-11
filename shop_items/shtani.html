@@ -43,10 +43,16 @@
       .pic{
         width: 100%;
         height: 35vw;
-        background-image: url('../images/items_images/dgdg.png');
-        background-position: center;
+        background-image: url('../images/items_images/shtani.png');
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: .8s all ease;
+
+      }
+      .pic:hover {
+        box-shadow: 0 0 15px 15px #00FF19;
+        transition: .5s all ease;
       }
       .price{
         font-family: 'Pragmatica-Italic';
@@ -72,6 +78,8 @@
         background-color: #00FF19;
         border: 1px #00FF19 solid;
         transition: .2s all ease;
+        cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
+
       }
       .inf{
         display: flex;
@@ -79,8 +87,33 @@
         height: auto;
         flex-direction: column;
       }
+      .option{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        margin-bottom: 10px;
+      }
       .size_box{
-        
+        width: 75px;
+        height: 50px;
+        border: 1px black solid;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+      .size_box p{
+        justify-content: center;
+        margin: 0;
+        vertical-align: middle;
+        transition: .5s all ease;
+
+      }
+      .size_box:hover {
+        background-color: #00FF19;
+        border: 1px #00FF19 solid;
+        transition: .2s all ease;
+        cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
+
       }
       footer {
         border-top: 1px solid black;
@@ -89,19 +122,27 @@
   </head>
   <body>
     <nav>
-        <a id="s1" href="index.html"></a>
-        <a  id="s2" href="visiting.html">посещение</a>
-        <a id="s3"  href="afisha.html">афиша</a>
-        <a id="s4"  href="events.html">события</a>
-        <a id="s5"  href="shop.html">магазин</a>
-        <a id="s6"  href="museum_info.html">о музее</a>
+        <a id="s1" href="../index.html"></a>
+        <a  id="s2" href="../visiting.html">посещение</a>
+        <a id="s3"  href="../afisha.html">афиша</a>
+        <a id="s4"  href="../events.html">события</a>
+        <a id="s5"  href="../shop.html">магазин</a>
+        <a id="s6"  href="../museum_info.html">о музее</a>
     </nav>
     <main>
       <div class="text_box">
         <div class="inf">
           <p>широкие штаны</p>
           <p>удобная модель с&nbspдвойными передними складками на&nbspшироких штанинах прямого покроя. Ткань — мягкий саржевый трикотаж.</p>
+          <div class="option">
+            <div class="size_box"><p>xs</p></div>
+            <div class="size_box"><p>s</p></div>
+            <div class="size_box"><p>m</p></div>
+            <div class="size_box"><p>l</p></div>
+
+          </div>
           <p class="price">3000p</p>
+
         </div>
         <div class="buy_btn"><p>купить</p></div>
       </div>
