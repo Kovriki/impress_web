@@ -22,7 +22,7 @@ body{
 
 }
 a, .mail button{
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), pointer;
+  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/225738ee13e05fe6a1afa160da6b529bc94a2d04/images/cursor_p.svg"), pointer;
 }
 input {
   cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/56d6cbe7deccc9548570a9b98bf8fbb83a6945b3/images/cursor_t.svg"), text;
