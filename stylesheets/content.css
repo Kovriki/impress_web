@@ -21,7 +21,7 @@ body{
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
-a, .mail button{
+a, .mail button, .cover{
   cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
 }
 input {
@@ -71,7 +71,9 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
           text-decoration: none;
           align-items: center;
           color: black;
-          /* background: rgb(255,255,255); */
+          /* transition: all .4s ease; */
+
+          background: rgb(255,255,255);
 
           /* transition: 1s all; */
           /* transition-duration: 1s; */
@@ -81,9 +83,15 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
           /* transition-duration: 1s; */
           /* transition: 1s all; */
 
-          /* transition: 2s; */
-          background: rgb(0,255,25);
+          /* transition: .2s; */
+          /* background: rgb(0,255,25);
+           */
           background: linear-gradient(180deg, rgba(0,255,25,1) 0%, rgba(255,255,255,0) 100%);
+          /* transition: all .4s ease; */
+
+        }
+        .this_p {
+          font-family: "Pragmatica_Bold";
         }
         #s1{
           height: 144px;
