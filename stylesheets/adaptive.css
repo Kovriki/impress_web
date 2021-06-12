@@ -1,4 +1,5 @@
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  /* ipadik */
   .index{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -26,11 +27,6 @@
 
 
 }
-
-
-
-
-
 
 
 
@@ -105,6 +101,34 @@
     }
 }
 @media only screen and (max-width: 768px) {
+  /* telefon4ik */
+
+nav{
+  nav{
+    height: 144px;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr;;
+  }
+}
+#s1{
+  width: 50vw;
+}
+#s2, #s3, #s4, #s5, #s6 {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   body{
     font-size: 1.3em;
   }
