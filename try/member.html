@@ -15,6 +15,12 @@
       filter: blur(6px);
       /* animation: color_change 8s infinite; */
       }
+      .active{
+        filter: none;
+        background-color: blue;
+
+
+      }
       @-webkit-keyframes color_change {
       0% {background-color: red;}
       25% {background-color: orange;}
@@ -42,23 +48,33 @@
       }
     </style>
     <script type="text/javascript">
-    let xPrev = 0;
-    jQuery(document).ready(function(){
-
-       $(document).mousemove(function(e){
-           xPrev<e.pageX ? $('#lr').html("right") : $('#lr').html("left");
-           xPrev=e.pageX;
-          $('#status').html(e.pageX +', '+ e.pageY);
-
-       });
-    })
+    // let xPrev = 0;
+    // jQuery(document).ready(function(){
+    //
+    //    $(document).mousemove(function(e){
+    //        xPrev<e.pageX ? $('#lr').html("right") : $('#lr').html("left");
+    //        xPrev=e.pageX;
+    //       $('#status').html(e.pageX +', '+ e.pageY);
+    //
+    //    });
+    // })
 
     $(document).mousemove(function(e) {
   $('#cursor').css({
     left:e.pageX - 10,
     top:e.pageY - 10
   });
+
+  $(".box").mouseover(function(){
+$("#cursor").addClass("...");
 });
+$("a, .larrow1, .rarrow1").mouseout(function(){
+$("#cursor").removeClass("fill");
+});
+});
+
+
+
     </script>
   </head>
   <body>
