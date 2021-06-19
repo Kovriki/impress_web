@@ -3,8 +3,69 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style media="screen">
+    #cursor {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%/50%;
+      background-color: #2f0;
+      /* transition: .4s all ease; */
+      filter: blur(6px);
+      /* animation: color_change 8s infinite; */
+      }
+      @-webkit-keyframes color_change {
+      0% {background-color: red;}
+      25% {background-color: orange;}
+      50% {background-color: yellow;}
+      75% {background-color: blue;}
+      100% {background-color: red;}
+      }
+      .box{
+        width: 300px;
+        height: 300px;
+        transition: .4s all ease;
+        border: 1px solid cyan;
+        background-color: white;
+
+      }
+      .box:hover {
+        background-color: cyan;
+        transition: .4s all ease;
+
+      }
+      .box:hover ~ #cursor {
+        background-color: blue;
+        /* transition: .4s all ease; */
+
+      }
+    </style>
+    <script type="text/javascript">
+    let xPrev = 0;
+    jQuery(document).ready(function(){
+
+       $(document).mousemove(function(e){
+           xPrev<e.pageX ? $('#lr').html("right") : $('#lr').html("left");
+           xPrev=e.pageX;
+          $('#status').html(e.pageX +', '+ e.pageY);
+
+       });
+    })
+
+    $(document).mousemove(function(e) {
+  $('#cursor').css({
+    left:e.pageX - 10,
+    top:e.pageY - 10
+  });
+});
+    </script>
   </head>
   <body>
+<div class="box">
+
+</div>
+<div class="" id="cursor"></div>
 
   </body>
 </html>
