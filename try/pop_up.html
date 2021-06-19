@@ -5,191 +5,53 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
-    body{
-      cursor: none;
-    }
-      .burg{
-        width: 50vw;
-        height: 25vh;
-        /* display: grid; */
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-        color: black;
-        background-color: yellow;
-        transition: .3s;
-
+      .btn{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        background-color: white;
+        transition: .4s all ease;
       }
-      nav{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
+      .btn:hover {
+        background-color: cyan;
+        transition: .4s all ease;
+      }
+      .popup .btn{
+        display: block;
+      }
+      .popup{
+        width: 40vw;
+        height: 25vw;
+        position: absolute;
+        top:10vw;
+        left: 30vw;
+        background:yellow;
         display: none;
-      }
-      #s1{
-        height: 144px;
-        grid-area: 1/1/3/3;
-        padding: 4vw;
-        background-image: url("../images/impress_logo.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: .2s all ease;
-
-        /* background-size: contain; */
-      }
-      nav a {
-        width: 50vw;
-        height: 25vh;
-        /* display: grid; */
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-        color: black;
-        transition: .3s;
       }
       .hidden{
         opacity: 0;
       }
       .block{
-        display: none;
-      }
-      .d_grid{
-        display: block;
-      }
-      .burg:hover,
-      nav a:hover {
-        background-color: blue;
-        opacity: .7;
-        transition: .3s;}
-
-      .menu-n {
-        width: 100vw;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .menu-n #s1{
-        grid-area:1/1/2/2;
-      }
-      .menu-n .burg {
-        grid-area: 1/2/2/3;
+        display: none
       }
 
-
-      #cursor {
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      border-radius: 50%/50%;
-      background-color: #00FF19;
-      filter: blur(.3rem);
-      /* animation: color_change 8s infinite; */
-      }
-      nav .burg:hover #cursor {
-        /* filter: none; */
-        background-color: blue;
-      }
-      #cursor::backdrop{
-        background-color: blue;
-      }
-       @-webkit-keyframes color_change {
-      0% {background-color: red;}
-      25% {background-color: orange;}
-      50% {background-color: yellow;}
-      75% {background-color: blue;}
-      100% {background-color: red;}
-      }
-
-      #s1{grid-area: 1/1/2/2;}
-      #s2{grid-area: 1/2/2/3;}
-      #s3{grid-area: 2/1/3/2;}
-      #s4{grid-area: 2/2/3/3;}
-      #s5{grid-area: 3/1/4/2;}
-      #s6{grid-area: 3/2/4/3;}
-      .burg {grid-area: 1/2/2/3}
-      nav a { display: none;}
-      /* .burg{ display: none} */
-      .hidden{
-        display: none;
-      }
-      .fade {
-        opacity: 0;
-      }
     </style>
     <script type="text/javascript">
         $(document).ready(function(){
-          $("nav .burg").click(function(){
-
-          })
+          $(".btn").click(function(){
+            $(".popup,.popup .btn").show();
+          });
+          $(".popup .btn").click(function(){
+            $(".popup,.popup .btn").hide();
+          });
 
         });
-
-        let xPrev = 0;
-            jQuery(document).ready(function(){
-
-               $(document).mousemove(function(e){
-                   xPrev<e.pageX ? $('#lr').html("right") : $('#lr').html("left");
-                   xPrev=e.pageX;
-                  $('#status').html(e.pageX +', '+ e.pageY);
-
-               });
-            })
-
-
-                        $(document).mousemove(function(e) {
-              $('#cursor').css({
-                left:e.pageX - 10,
-                top:e.pageY - 10
-              });
-            });
-
-
-            $(document).ready(function () {
-                 $(".menu-n .burg").click(function () {
-                   
-                   // $(this).parent().addClass("fade");
-                   // $(".black_screen" ).addClass("fade");
-                   setTimeout(function () {
-                     $("nav, .menu-n" ).toggleClass("hidden");
-                   },500);
-                   setTimeout(function () {
-                     if ($("nav").hasClass("hidden")) {
-                       $(".menu-n" ).removeClass("fade");
-                       // $(".black_screen" ).removeClass("fade");
-                     } else {
-                       $("nav" ).removeClass("fade");
-                     }
-                   },600);
-                 })
-               });
-
-
-
-
-      // $(document).ready(function(){
-      //   $(".burg").click(function(){
-      //     $(this).addClass("hidden");
-      //     setTimeOut(function(){
-      //       $(".burg").addClass("block"),
-      //       100})
-      //       $("nav a").addClass("d_grid")
-      //   })
-      // })
     </script>
   </head>
   <body>
-
-    <nav class="fade hidden">
-        <a id="s1" href="index.html">impress</a>
-        <!-- <div class="burg"></div> -->
-        <a id="s2" href="visiting.html">посещение</a>
-        <a id="s3"  href="afisha.html">афиша</a>
-        <a id="s4"  href="events.html">события</a>
-        <a id="s5"  href="shop.html">магазин</a>
-        <a id="s6"  href="museum_info.html">о музее</a>
-    </nav>
-    <div class="menu-n ">
-      <a id="s1" href="index.html">impress</a>
-      <div class="burg"></div>
+    <div class="btn"></div>
+    <div class="popup">
+      <div class="btn"></div>
     </div>
-    <div id="cursor"></div>
   </body>
 </html>

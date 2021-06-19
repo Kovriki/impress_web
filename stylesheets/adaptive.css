@@ -103,7 +103,7 @@
 @media only screen and (max-width: 768px) {
   /* telefon4ik */
 
-nav{
+/* nav{
   nav{
     height: 144px;
     grid-template-rows: 1;
@@ -160,4 +160,4 @@ nav{
     grid-area: 4/1/5/3;
     overflow: hidden;
 }
-}
+} */

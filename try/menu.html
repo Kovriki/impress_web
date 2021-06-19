@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <style media="screen">
+    .fade{
+      opacity: 0;
+    }
+    .hidden{
+      display: none;
+    }
+    .icon-more,.icon-close{
+      width: 50vw;
+      height: 144px;
+      background-color: blue;
+      display: grid;
+      grid-area:1/2/2/3;
+
+    }
+    .menu-non-active{
+          grid-template-columns: 1fr 1fr;
+          transition: all .4s ease;
+
+    }
+    .menu-non-active #s1{
+      grid-area: 1/1/2/2;
+    }
+    .menu-non-active .icon-more{
+      grid-area: 1/2/2/3;
+    }
+    .menu-items{
+      transition: all .4s ease;
+      display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    }
+
+    #s2, #s3, #s4, #s5, #s6{
+      display: block;
+      width: 50vw;
+      height: 25vh;
+
+    }
+    #s2{ grid-area:2/1/3/2; }
+    #s3{ grid-area:2/2/3/3; }
+    #s4{ grid-area:3/1/4/2; }
+    #s5{ grid-area:3/2/4/3; }
+    #s6{ grid-area:4/1/5/2; }
+
+
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $(" .icon-close").click(function(){
+            // $(".menu-items").addClass("fade")
+            $(this).parent().addClass("fade")
+            setTimeout(function(){
+              $(".menu-items, .menu-non-active").toggleClass("hidden");
+            },500);
+            setTimeout(function(){
+              if($(".menu-items").hasClass("hidden")){
+                $(".menu-non-active").removeClass("fade");
+              } else {
+                $(".menu-items").removeClass("fade");
+              }
+              // $("menu-non-active").removeClass("fade");
+            },600);
+          })
+
+
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <div class="menu-non-active">
+      <a id="s1"href="#"></a>
+      <a href="#" class="icon-close"></a>
+    </div>
+
+  <div class="menu-items fade hidden">
+    <a id="s1"href="#"></a>
+    <!-- <a href="#" class="icon-more"></a> -->
+    <a id="s2"href="#">посещение</a>
+    <a id="s3"href="#">события</a>
+    <a id="s4"href="#">ебола</a>
+    <a id="s5"href="#">блять</a>
+    <a id="s6"href="#">сука</a>
+    <a href="#" class="icon-close"></a>
+  </div>
+
+
+
+
+  </body>
+</html>

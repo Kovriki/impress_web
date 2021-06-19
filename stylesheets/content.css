@@ -41,7 +41,7 @@ input {
   width: 16px;
   height: 16px;
   background-color: rgba(0,255,25,1);
-  
+
 }
 
 
@@ -54,7 +54,7 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
 |_| |_| |_|\___|_| |_|\__,_|      |_.__/ \__,_|_|
 */
 
-        nav{
+        nav, .menu-items, .menu-non-active{
           width: 100vw;
           height: 144px;
           display: grid;
@@ -65,7 +65,7 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
 
 
         }
-        nav a{
+        nav a, .menu-items a{
 
           height: 72px;
           box-sizing: border-box;
