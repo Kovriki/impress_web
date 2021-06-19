@@ -54,7 +54,7 @@ _ __ ___   ___ _ __  _   _ ______| |__   __ _ _ __
 |_| |_| |_|\___|_| |_|\__,_|      |_.__/ \__,_|_|
 */
 
-        nav, .menu-items, .menu-non-active{
+        nav, .menu-items{
           width: 100vw;
           height: 144px;
           display: grid;

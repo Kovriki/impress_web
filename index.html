@@ -24,33 +24,32 @@
 } */
 
 
-.menu-non-active{
+.menu-non-active, .icon-close{
   display:none;
 }
 
+
+
 @media only screen and (max-width: 768px) {
   /* telefon4ik */
 
-nav{
   nav{
-    height: 144px;
-    grid-template-rows: 1;
-    grid-template-columns: 1fr 1fr;;
+    nav{
+      height: 144px;
+      grid-template-rows: 1;
+      grid-template-columns: 1fr 1fr;;
+    }
   }
-}
-#s1{
-  width: 50vw;
-}
-#s2, #s3, #s4, #s5, #s6 {
-  display: none;
-}
+  #s1{
+    width: 50vw;
+  }
+  #s2, #s3, #s4, #s5, #s6 {
+    display: none;
+  }
 
-
-@media only screen and (max-width: 768px) {
-  /* telefon4ik */
 
   body{
-    font-size: 1.3em;
+    font-size: 1.3em;transition: 1s all ease;
   }
   .index{
     grid-template-columns:  1fr;
@@ -80,7 +79,12 @@ nav{
     grid-area: 4/1/5/3;
     overflow: hidden;
   }
-  #s2, #s3, #s4, #s5, #s6{
+  #s1{
+    border:1px solid black;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #s1,#s2, #s3, #s4, #s5, #s6, .icon-close{
     display: block;
     width: 50vw;
     height: 25vh;
@@ -100,6 +104,10 @@ nav{
   grid-template-rows: 25vh 25vh 25vh 25vh;
   }
   .menu-non-active{
+    width: 50vw;
+    height: 25vh;
+    display: grid;
+    box-sizing: border-box;
         grid-template-columns: 1fr 1fr;
         transition: all .4s ease;
 
@@ -115,33 +123,47 @@ nav{
     display: none;
   }
   .hidden{
-    opacity: 0;
+    /* opacity: 0; */
+    height: 25vh;
+    transition: .8s all ease;
   }
   .icon-more,.icon-close{
     width: 50vw;
-    height: 144px;
+    height: 25vh;
     background-color: blue;
     display: grid;
     grid-area:1/2/2/3;
-
+}
+.fade{
+  display: none;
 }
 
+
 }
-
-
-
 
 
 
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
+      /////////
+      $(window).resize(function(){
+      let width = $(window).width();
+      if(width <= 768){
+        $('nav').addClass('fade');
+        $('nav').addClass('hidden');
+        $('nav').addClass('hidden');
+      }
+      })
+
+.resize();
+
         $(".icon-close").click(function(){
           // $(".menu-items").addClass("fade")
           $(this).parent().addClass("hidden")
           setTimeout(function(){
             $("nav, .menu-non-active").toggleClass("fade");
-          },500);
+          },600);
           setTimeout(function(){
             if($("nav").hasClass("fade")){
               $(".menu-non-active").removeClass("hidden");
@@ -149,7 +171,7 @@ nav{
               $("nav").removeClass("hidden");
             }
             // $("menu-non-active").removeClass("fade");
-          },600);
+          },800);
         })
 
 

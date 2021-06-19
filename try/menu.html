@@ -56,6 +56,27 @@
     </style>
     <script type="text/javascript">
       $(document).ready(function(){
+        /////////
+        $(window).resize(function(){
+        let width = $(window).width();
+
+        if(width <= 1484){
+            $('#info').removeClass('col9').addClass('col8');
+        }
+
+        })
+
+.resize();
+
+
+
+
+
+
+
+
+
+        //////
           $(" .icon-close").click(function(){
             // $(".menu-items").addClass("fade")
             $(this).parent().addClass("hidden")
