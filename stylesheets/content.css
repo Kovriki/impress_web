@@ -1,4 +1,5 @@
-body{
+*{
+  cursor: none;
   /* overflow: hidden; */
 }
 @font-face {
@@ -13,36 +14,61 @@ body{
   font-family: "Pragmatica_Bold";
   src: url('../fonts/Pragmatica_bold.otf')
 }
+.cursor {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%/50%;
+  background-color: #2f0;
+  filter: blur(6px);
+  pointer-events: none;
+  transition: .1s all ease;
+  z-index: 40;
+  }
+  .active{
+    height: 15px;
+    width: 15px;
+    background-color: blue;
+    filter: none;
+    transition: .1s all ease;
+    z-index: 41;
+
+  }
+  .inter {
+    position: absolute;
+    height: 30px;
+    width: 5px;
+    border-radius: 20%/20%;
+    background-color: #2f0;
+    filter: none;
+    pointer-events: none;
+    transition: .2s all ease;
+    z-index: 42;
+    }
 
 body{
   font-family: "Pragmatica_Regular";
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
+  /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto; */
   /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/4d730d3f0cbf6022ab0e7c9f73f33e282fecef63/images/cursor_p.svg"), pointer; */
      /* a { cursor: url('../images/cursor.cur'), pointer; } */
 
 }
 a, .mail button, .cover{
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer;
+  /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer; */
 }
 input {
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/56d6cbe7deccc9548570a9b98bf8fbb83a6945b3/images/cursor_t.svg"), text;
+  /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/56d6cbe7deccc9548570a9b98bf8fbb83a6945b3/images/cursor_t.svg"), text; */
 
 }
 
 
 .svg {
-  cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto;
+  /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/72169f1b78e3c16099e45fe2589410cb8d272245/images/cursor.svg"), auto; */
 }
 .png {
-  cursor: url("https://github.com/Kovriki/impress_web/blob/main/images/cursor.png?raw=true"), auto;
+  /* cursor: url("https://github.com/Kovriki/impress_web/blob/main/images/cursor.png?raw=true"), auto; */
 }
 
-.cursor{
-  width: 16px;
-  height: 16px;
-  background-color: rgba(0,255,25,1);
-
-}
 
 
 /*

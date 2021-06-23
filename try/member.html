@@ -5,13 +5,14 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style media="screen">
-    #cursor {
+    .cursor {
       position: absolute;
       height: 40px;
       width: 40px;
       border-radius: 50%/50%;
       background-color: #2f0;
       filter: blur(6px);
+      pointer-events: none;
       }
       .active{
         background-color: blue;
@@ -55,16 +56,16 @@
     // })
 
     $(document).mousemove(function(e) {
-  $('#cursor').css({
+  $('.cursor').css({
     left:e.pageX - 10,
     top:e.pageY - 10
   });
 
-  $("a, input").mouseover(function(){
-$("#cursor").addClass("active");
+  $("a, input, .box").mouseover(function(){
+$(".cursor").addClass("active");
 });
-$("a, input").mouseout(function(){
-$("#cursor").removeClass("active");
+$("a, input, .box").mouseout(function(){
+$(".cursor").removeClass("active");
 });
 });
 
@@ -74,7 +75,7 @@ $("#cursor").removeClass("active");
     </script>
   </head>
   <body>
-    <div class="" id="cursor"></div>
+    <div class="cursor" id=""></div>
 
 <div class="box">
 
