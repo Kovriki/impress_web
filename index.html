@@ -7,6 +7,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style media="screen">
+    #cursor {
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%/50%;
+      background-color: #2f0;
+      filter: blur(6px);
+      }
+      .active{
+        filter: none;
+        background-color: blue;
+        background-color: blue;
+      }
 .bg{
   width: 70%;
   height: 70%;
@@ -28,8 +41,117 @@
   display:none;
 }
 
+.member_popup{
+  position: fixed;
+  width: 570px;
+  height: 700px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  z-index:30;
+  top: calc(50vh - 350px);
+  left: calc(50vw - 295px);
+  /* justify-content: center; */
+  justify-content: space-around;
+  align-items: center;
+}
 
+.gif_box{
+  width: 500px;
+  height: 300px;
+  background-color: blue;
+  display: flex;
+  margin-top: 40px;
+}
+.exit{
+  width:33px;
+  height: 33px;
+  position: absolute;
+  top:0;
+  right: 0;
+  border: 1px black solid;
+  transition: .4s all ease;
+}
+.exit:hover{
+  background-color: black;
+  transition: .4s all ease;
+}
+.black{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .4;
+  backdrop-filter: blur(70px);
+  -webkit-backdrop-filter: blur(70px);
 
+  z-index:20;
+}
+.member_popup button {
+  margin-bottom: 40px;
+}
+.member_popup p {
+  line-height: 1em;
+}
+input {
+  padding-left: 15px;
+}
+input:focus {
+  font-size: 0.3em;
+
+}
+input[type="text"]:focus,
+input[type="email"]:focus{
+  font-size: 0.3em;
+
+}
+.prisoedin{
+  width: 300px;
+  height: 72px;
+  border:1px black solid;
+  font-family: "Pragmatica_Italic";
+  font-size: 1.2em;
+  transition: .2s;
+
+}
+.prisoedin:hover {
+  background:black;
+  color: white;
+  transition: .4s;
+}
+.hidden {
+  opacity: 0;
+}
+.fade {
+  display: none;
+}
+.dop {
+  width: 150px;
+  height: 70px;
+  background-image: url("images/dop.png");
+  position: absolute;
+  display: block;
+  top:120vw;
+  left: 0;
+  background-position: center;
+  animation: move 4s line infinite;
+  z-index: 25;
+}
+@keyframes move {
+  0%{
+    top: calc(0 + 70px)
+  }
+  100%{
+    right: calc(0 + 150px)
+    }
+
+}
 @media only screen and (max-width: 768px)  {
   /* telefon4ik */
   nav{
@@ -124,6 +246,18 @@
     height: 25vh;
     transition: .8s all ease;
   }
+  .fade{
+    display: none;
+  }
+  footer {
+    justif
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  footer .mail {
+    grid-area: 1/1/2/2;
+  }
   .icon-more,.icon-close{
     width: 50vw;
     height: 25vh;
@@ -131,26 +265,38 @@
     display: grid;
     grid-area:1/2/2/3;
 }
-.fade{
-  display: none;
-}
-footer {
-  justif
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
-}
-footer .mail {
-  grid-area: 1/1/2/2;
-}
-
 }
 
 
 
     </style>
+
+
     <script type="text/javascript">
     $(document).ready(function(){
+      $(".prisoedin").click(function(){
+          $(".member_popup").addClass("hidden")
+          setTimeout(function(){
+            $(".member_popup").addClass("fade")
+          },500);
+      });
+};
+      ///////
+      $(document).mousemove(function(e) {
+    $('#cursor').css({
+      left:e.pageX - 10,
+      top:e.pageY - 10
+    });
+
+    $(".box").mouseover(function(){
+      $("#cursor").addClass("active");
+      });
+      $(".box").mouseout(function(){
+      $("#cursor").removeClass("active");
+    });
+  });
+
+
       /////////
       $(window).resize(function(){
       let width = $(window).width();
@@ -185,17 +331,19 @@ footer .mail {
     </script>
   </head>
   <body>
+
     <div class="member_popup">
+      <div class="exit"></div>
       <div class="gif_box">
-        <img src="foo.gif" alt="This is an animated gif image, but it does not move"/>
-        <p>Присоединяйся к Impress News и получи бесплатный доступ к лекциям от мемологов.</p>
+        <img src="images/cat_gif.gif" alt="This is an animated gif image, but it does not move"/>
       </div>
+        <p>Присоединяйся к Impress News и получи бесплатный доступ к лекциям от мемологов.</p>
+
       <input type="text" name="name" value="" placeholder="имя">
       <input type="email" name="email" value="" placeholder="email">
-      <button type="button" name="prisoedin"></button>
-
-
+      <button class="prisoedin" type="button" name="prisoedin">присоединиться</button>
     </div>
+    <div class="black"></div>
 
 
 
@@ -240,6 +388,8 @@ footer .mail {
       </div>
       <div class="questions"><h6> Кто мы? Откуда мы пришли? Куда мы идём?</h6><div>
     </main>
+    <div class="dop">
+    </div>
     <footer>
 
       <div class="mail">

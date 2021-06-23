@@ -11,15 +11,13 @@
       width: 40px;
       border-radius: 50%/50%;
       background-color: #2f0;
-      /* transition: .4s all ease; */
       filter: blur(6px);
-      /* animation: color_change 8s infinite; */
       }
       .active{
-        filter: none;
         background-color: blue;
-
-
+      }
+      .animat{
+        animation: color_change 2s ease infinite;
       }
       @-webkit-keyframes color_change {
       0% {background-color: red;}
@@ -32,19 +30,16 @@
         width: 300px;
         height: 300px;
         transition: .4s all ease;
-        border: 1px solid cyan;
-        background-color: white;
-
+        /* border: 1px solid cyan; */
+        background-color: cyan;
       }
       .box:hover {
-        background-color: cyan;
+        background-color: yellow;
         transition: .4s all ease;
-
       }
       .box:hover ~ #cursor {
         background-color: blue;
         /* transition: .4s all ease; */
-
       }
     </style>
     <script type="text/javascript">
@@ -65,23 +60,25 @@
     top:e.pageY - 10
   });
 
-  $(".box").mouseover(function(){
-$("#cursor").addClass("...");
+  $("a, input").mouseover(function(){
+$("#cursor").addClass("active");
 });
-$("a, .larrow1, .rarrow1").mouseout(function(){
-$("#cursor").removeClass("fill");
+$("a, input").mouseout(function(){
+$("#cursor").removeClass("active");
 });
 });
+
 
 
 
     </script>
   </head>
   <body>
+    <div class="" id="cursor"></div>
+
 <div class="box">
 
 </div>
-<div class="" id="cursor"></div>
 
   </body>
 </html>
