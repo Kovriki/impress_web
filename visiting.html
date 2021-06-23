@@ -4,84 +4,113 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="stylesheets/style.css">
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
     <style media="screen">
-.containment-wrapper{
-  width: 100vw;
-  height: 100vh;
-}
+      .containment-wrapper{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-flow: wrap row;
+        border-bottom:1px solid black;
+        box-sizing: border-box;
+      }
       .render_box{
-        width: 10vw;
-        height: 10vw;
+        /* width: 10vw;
+        height: 10vw; */
+        width: 10em;
+        height: 10em;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        /* display: flex; */
+        /* background-color: blue; */
       }
-      #i1{background-image: url("01.png");}
-      #i2{background-image: url("02.png");}
-      #i3{background-image: url("03.png");}
-      #i4{background-image: url("04.png");}
-      #i5{background-image: url("05.png");}
-      #i6{background-image: url("06.png");}
-      #i7{background-image: url("07.png");}
-      #i8{background-image: url("08.png");}
-      #i9{background-image: url("09.png");}
-      #i0{background-image: url("10.png");}
+      .g_inf {
+        width: 25vw;
+        height: 10em;
+        display: flex;
+        margin-top: 0;
+        flex-direction: column;
+        margin-right: 0;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #i1{background-image: url("images/visiting/01.png");}
+      #i2{background-image: url("images/visiting/02.png");}
+      #i3{background-image: url("images/visiting/03.png");}
+      #i4{background-image: url("images/visiting/04.png");}
+      #i5{background-image: url("images/visiting/05.png");}
+      #i6{background-image: url("images/visiting/06.png");}
+      #i7{background-image: url("images/visiting/07.png");}
+      #i8{background-image: url("images/visiting/08.png");}
+      #i9{background-image: url("images/visiting/09.png");}
+      #i10{background-image: url("images/visiting/10.png");}
 
-      #i11{background-image: url("11.png");}
-      #i12{background-image: url("12.png");}
-      #i13{background-image: url("13.png");}
-      #i14{background-image: url("14.png");}
-      #i15{background-image: url("15.png");}
-      #i16{background-image: url("16.png");}
-      #i17{background-image: url("17.png");}
-      #i18{background-image: url("18.png");}
-      #i19{background-image: url("19.png");}
-      #i20{background-image: url("20.png");}
+      #i11{background-image: url("images/visiting/11.png");}
+      #i12{background-image: url("images/visiting/12.png");}
+      #i13{background-image: url("images/visiting/13.png");}
+      #i14{background-image: url("images/visiting/14.png");}
+      #i15{background-image: url("images/visiting/15.png");}
+      #i16{background-image: url("images/visiting/16.png");}
+      #i17{background-image: url("images/visiting/17.png");}
+      #i18{background-image: url("images/visiting/18.png");}
+      #i19{background-image: url("images/visiting/19.png");}
+      #i20{background-image: url("images/visiting/20.png");}
 
-      #i21{background-image: url("21.png");}
-      #i22{background-image: url("22.png");}
-      #i23{background-image: url("23.png");}
-      #i24{background-image: url("24.png");}
-      #i25{background-image: url("25.png");}
-      #i26{background-image: url("26.png");}
-      #i27{background-image: url("27.png");}
-      #i28{background-image: url("28.png");}
-      #i29{background-image: url("29.png");}
-      #i30{background-image: url("30.png");}
+      #i21{background-image: url("images/visiting/21.png");}
+      #i22{background-image: url("images/visiting/22.png");}
+      #i23{background-image: url("images/visiting/23.png");}
+      #i24{background-image: url("images/visiting/24.png");}
+      #i25{background-image: url("images/visiting/25.png");}
+      #i26{background-image: url("images/visiting/26.png");}
+      #i27{background-image: url("images/visiting/27.png");}
+      #i28{background-image: url("images/visiting/28.png");}
+      #i29{background-image: url("images/visiting/29.png");}
+      #i30{background-image: url("images/visiting/30.png");}
 
-      #i31{background-image: url("31.png");}
-      #i32{background-image: url("32.png");}
-      #i33{background-image: url("33.png");}
-      #i34{background-image: url("34.png");}
-      #i35{background-image: url("35.png");}
-      #i36{background-image: url("36.png");}
-      #i37{background-image: url("37.png");}
-      #i38{background-image: url("38.png");}
-      #i39{background-image: url("39.png");}
-      #i40{background-image: url("40.png");}
+      #i31{background-image: url("images/visiting/31.png");}
+      #i32{background-image: url("images/visiting/32.png");}
+      #i33{background-image: url("images/visiting/33.png");}
+      #i34{background-image: url("images/visiting/34.png");}
+      #i35{background-image: url("images/visiting/35.png");}
+      #i36{background-image: url("images/visiting/36.png");}
+      #i37{background-image: url("images/visiting/37.png");}
+      #i38{background-image: url("images/visiting/38.png");}
+      #i39{background-image: url("images/visiting/39.png");}
+      #i40{background-image: url("images/visiting/40.png");}
 
-      #i1{background-image: url("01.png");}
-      #i1{background-image: url("01.png");}
-      #i1{background-image: url("01.png");}
-      #i1{background-image: url("01.png");}
-
+      #i41{background-image: url("images/visiting/41.png");}
+      #i42{background-image: url("images/visiting/42.png");}
+      #i43{background-image: url("images/visiting/43.png");}
+      #i44{background-image: url("images/visiting/44.png");}
+.drag{}
     </style>
+    <script>$('.drag').draggable();</script>
+
     <script type="text/javascript">
-        $(document).ready(function(){
-          $( function() {
-            // $( "#draggable5" ).draggable({ grid: [ 20, 20 ] });
-            $( ".drag" ).draggable({  grid: [ 20, 20 ], containment: ".containment-wrapper", scroll: false });
-          } );
+    $(document).ready(function(){
+
+    $( function() {
+      $( ".drag" ).draggable({  grid: [ 20, 20 ], containment: ".containment-wrapper", scroll: false });
+    } );
+
         })
     </script>
   </head>
   <body>
     <div class="cursor"></div>
-    
+
     <nav>
         <a id="s1" href="index.html"></a>
-        <a  id="s2" class="this_p" href="visiting.html">посещение</a>
+        <a id="s2" class="this_p" href="visiting.html">посещение</a>
         <a id="s3"  href="afisha.html">афиша</a>
         <a id="s4"  href="events.html">события</a>
         <a id="s5"  href="shop.html">магазин</a>
@@ -91,16 +120,58 @@
     <main>
 
 <div class="containment-wrapper">
-      <div class="">
+  <div class="g_inf">
+    <h6>subdiv\\sculpt</h6>
+    <p>построй собственую очередь для посещение выставки</p>
+  </div>
+  <div class="render_box drag" id="i1"></div>
+  <div class="render_box drag" id="i2"></div>
+  <div class="render_box drag" id="i3"></div>
+  <div class="render_box drag" id="i4"></div>
+  <div class="render_box drag" id="i5"></div>
+  <div class="render_box drag" id="i6"></div>
+  <div class="render_box drag" id="i7"></div>
+  <!-- <div class="render_box drag" id="i8"></div> -->
+  <div class="render_box drag" id="i9"></div>
+  <div class="render_box drag" id="i10"></div>
 
-      </div>
+  <!-- <div class="render_box drag" id="i11"></div> -->
+  <div class="render_box drag" id="i12"></div>
+  <div class="render_box drag" id="i13"></div>
+  <div class="render_box drag" id="i14"></div>
+  <div class="render_box drag" id="i15"></div>
+  <!-- <div class="render_box drag" id="i16"></div> -->
+  <div class="render_box drag" id="i17"></div>
+  <div class="render_box drag" id="i18"></div>
+  <div class="render_box drag" id="i19"></div>
+  <div class="render_box drag" id="i20"></div>
 
+  <!-- <div class="render_box drag" id="i21"></div> -->
+  <div class="render_box drag" id="i22"></div>
+  <div class="render_box drag" id="i23"></div>
+  <div class="render_box drag" id="i24"></div>
+  <div class="render_box drag" id="i25"></div>
+  <div class="render_box drag" id="i26"></div>
+  <div class="render_box drag" id="i27"></div>
+  <div class="render_box drag" id="i28"></div>
+  <div class="render_box drag" id="i29"></div>
+  <!-- <div class="render_box drag" id="i30"></div> -->
 
+  <div class="render_box drag" id="i31"></div>
+  <div class="render_box drag" id="i32"></div>
+  <!-- <div class="render_box drag" id="i33"></div> -->
+  <div class="render_box drag" id="i34"></div>
+  <!-- <div class="render_box drag" id="i35"></div> -->
+  <div class="render_box drag" id="i36"></div>
+  <div class="render_box drag" id="i37"></div>
+  <!-- <div class="render_box drag" id="i38"></div> -->
+  <div class="render_box drag" id="i39"></div>
+  <div class="render_box drag" id="i40"></div>
 
-
-
-
-
+  <!-- <div class="render_box drag" id="i41"></div> -->
+  <div class="render_box drag" id="i42"></div>
+  <div class="render_box drag" id="i43"></div>
+  <div class="render_box drag" id="i44"></div>
 </div>
     </main>
     <footer>

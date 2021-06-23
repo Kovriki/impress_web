@@ -76,3 +76,34 @@
 #a_2{background-image: url("../images/shop/product_02.png");}
 #a_3{background-image: url("../images/shop/product_03.png");}
 #a_4{background-image: url("../images/shop/product_04.png");}
+
+
+
+
+
+    .cost{
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 49%);
+      color: black;
+      text-align: left;
+      padding-left: 1.2em;
+      padding-top: 1em;
+      line-height: 1.3em;
+      opacity: 0;
+      transition: .5s;
+
+    }
+    .product_card{
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .product_card:hover  .cost{
+      opacity: 1;
+      transition: .2s;
+      /* cursor: url("https://raw.githubusercontent.com/Kovriki/impress_web/dc03f55b590552ce8b4e533f753be0febfd12843/images/cursor_p.svg"), pointer; */
+
+    }
+    .product_card a {
+      text-decoration: none;
+    }

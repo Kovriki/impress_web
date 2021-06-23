@@ -1,6 +1,5 @@
-*{
+* {
   cursor: none;
-  /* overflow: hidden; */
 }
 @font-face {
   font-family: "Pragmatica_Italic";
@@ -285,6 +284,9 @@ _ __ ___   __ _ _ _ __
        .wallpaper .mini_link{
          display: block;
         position: absolute;
+       }
+       iframe{
+         border-bottom: 1px solid black;
        }
 /*
        __            _

@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-
   $(document).mousemove(function(e) {
   $('.cursor').css({
   left:e.pageX - 10,
@@ -9,10 +7,10 @@ $(document).ready(function(){
   });
 
 
-  $("a, input, .box").mouseover(function(){
+  $("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket").mouseover(function(){
 $(".cursor").addClass("active");
 });
-$("a, input, .box").mouseout(function(){
+$("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket").mouseout(function(){
 $(".cursor").removeClass("active");
 });
 
