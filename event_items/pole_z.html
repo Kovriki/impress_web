@@ -5,26 +5,37 @@
     <title></title>
     <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="events_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style media="screen">
+    p{
+      pointer-events:none;
+    }
         main{
           width: 100vw;
           height: auto;
           display: flex;
           border-bottom: 1px solid black;
+          flex-direction: row;
         }
         .c_1{
-          width: 25vw;
+          /* width: 25vw; */
+          width: 24.9vw;
           display: flex;
           height: auto;
-          padding-left: 1em;
-          padding-top: 1em;
+          /* padding-left: 1em;
+          padding-top: 1em; */
           text-align: left;
+          box-sizing: border-box;
         }
         .c_2{
           width: 50vw;
           display: flex;
           height: auto;
           flex-direction: column;
+          box-sizing: border-box;
+
+
         }
         .c_3{
           width: 25vw;
@@ -34,9 +45,17 @@
           padding-top: 1em;
           flex-direction: column;
           text-align: left;
+          box-sizing: border-box;
+
         }
         .c_3 p{
           margin-bottom: 0;
+          line-height: 1em;
+          text-align: left;
+        }
+        .c_1 p, .c_2 p {
+          margin-left: 1em;
+          margin-top: .8em;
         }
         .e_name{
 
@@ -63,16 +82,119 @@
           align-items: flex-start;
           }
           .calendar{
-            width: 100%;
+            width: 50vw;
             height: 100px;
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
           }
+          .date_box {
+            width: calc(50vw / 7);
+            height: calc(50vw / 7);
+            box-sizing: border-box;
+            border: 1px black solid;
+            border-top: none;
+            border-right: none;
+            display: flex;
+            font-size: 1.2em;
+            font-family: "Pragmatica_Regular";
+            align-items: center;
+            justify-content: center;
+
+          }
+          .date_box:hover{
+            background-color: #00FF19;
+            color:white;
+            transition: .2s all ease;
+          }
+          /* .date_box:hover{
+            font-family: "Pragmatica_Italic";
+          } */
+          .calendar .date_box:last-child {
+            border-right: 1px solid black;
+
+          }
+          .mounth{
+            box-sizing: border-box;
+            width: 100%;
+            height: 72px;
+            border: 1px solid black;
+            font-family: "Pragmatica_Bold";
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* border-top: none; */
+            transition:.4s all ease;
+            text-align: center;
+
+          }
+          .buy_ticket {
+            box-sizing: border-box;
+            width: 100%;
+            height: 72px;
+            border: 1px solid black;
+            border-top:none;
+            font-family: "Pragmatica_Regular";
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s all ease;
+            box-sizing: border-box;
+            /* background-color: white; */
+
+          }
+          /* .buy_ticket:hover{
+            background-color: #00FF19;
+            color:white;
+            transition: .6s all ease;
+
+          } */
+          .active_btn{
+            background-color: black;
+            color:white;
+          }
+          /* .mounth:hover{
+            font-family: "Pragmatica_Italic";
+            transition:.4s all ease;
+          } */
     </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".date_box").click(function(){
+          $(this).addClass("active_btn");
+          $(".buy_ticket").addClass("active_btn")
+        });
+
+        $(".buy_ticket").click(function(){
+          $(".date_box, .buy_ticket").removeClass("active_btn")
+        })
+      });
+      // здесь должен был быть скрипт, который не даёт покупать билеты на разные даты
+      // $(".date_box").click(function(){
+      //   $()
+      // })
+
+
+
+
+      //
+      // $(document).ready(function(){
+      //   $(".date_box").click(funtciton(){
+      //     $(this).addClass("active_btn")
+      //   });
+      //
+      // })
+
+    </script>
   </head>
   <body>
+    
     <nav>
         <a id="s1" href="../index.html"></a>
-        <a  id="s2" href="../visiting.html">посещение</a>
+        <a id="s2" href="../visiting.html">посещение</a>
         <a id="s3"  href="../afisha.html">афиша</a>
         <a id="s4"  href="../events.html">события</a>
         <a id="s5"  href="../shop.html">магазин</a>
@@ -88,13 +210,20 @@
               <div class="poster" id="p_1"></div>
               <div class="poster" id="p_2"></div>
             </div>
+            <div class="mounth">июль</div>
             <div class="calendar">
-
-            </div>
+                <div class="date_box">4</div>
+                <div class="date_box">5</div>
+                <div class="date_box">6</div>
+                <div class="date_box">7</div>
+                <div class="date_box">8</div>
+                <div class="date_box">9</div>
+                <div class="date_box">10</div>
         </div>
+        <div class="buy_ticket">купить билет</div>
         <div class="c_3">
-          <p>27 мая — 4 июня</p>
-          <p>парк Лужники</p>
+          <p>27 мая — 4 июня  <br>парк Лужники</p>
+          <p></p>
         </div>
 
 
