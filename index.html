@@ -274,14 +274,21 @@ input[type="email"]:focus{
 
     <script type="text/javascript">
     $(document).ready(function(){
-      $(".prisoedin").click(function(){
-          $(".member_popup").addClass("hidden")
+      $(".prisoedin, .black, .exit").click(function(){
+          $(".member_popup, .black").addClass("hidden")
           setTimeout(function(){
-            $(".member_popup").addClass("fade")
+            $(".member_popup, .black").addClass("fade")
           },500);
       });
-};
       ///////
+
+      //
+      // $(".prisoedin").click(function(){
+      //   $(".member_popup").addClass("fade")
+      // })
+
+
+      ////
       $(document).mousemove(function(e) {
     $('#cursor').css({
       left:e.pageX - 10,
@@ -295,6 +302,7 @@ input[type="email"]:focus{
       $("#cursor").removeClass("active");
     });
   });
+});
 
 
       /////////
@@ -327,7 +335,6 @@ input[type="email"]:focus{
 
 
 
-    });
     </script>
   </head>
   <body>
