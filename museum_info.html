@@ -53,7 +53,7 @@
       }
       .blur{
         /* display: none; */
-        width: 100%;
+        width: 50%;
         height: 100vh;
         background: rgba(255, 255, 255, .2);
         backdrop-filter: blur(10px);
@@ -89,7 +89,76 @@
         opacity: 1;
         /* filter: blur(0); */
       }
+      .input_box{
+        width: 32vw;
+        height: 45px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-left: 12.5vw;
+        /* padding-top: 10px; */
+        /* display: flex; */
+        /* flex-direction: row; */
+        font-size: 1.2em;
+    }
+
+      label {
+        order: -1;
+        padding-left: 5px;
+        transition: all 0.3s ease-in;
+        /* transform: translateY(20px); */
+        pointer-events: none;
+        display: flex;
+        order: -1;
+      }
+
+      input:focus + label {
+        font-size: .6em;
+        transform: translateY(-16px);
+      }
+
+
+      input{
+        display: inline-block;
+        text-align: start;
+        margin-left: 12.5vw;
+        vertical-align: middle;
+        color: black;
+        margin-left: 3vw;
+        margin-left: 10px;
+        padding-left: 50px;
+        border: none;
+
+      }
+      /* .mail input {
+        margin: 0;
+      } */
+      /* input:focus ~ label{
+        font-size: .8em;
+        width: 1em;
+        height: 10px;
+      } */
+      footer .mail {
+    width: 100vw;
+    height: 10em;
+    grid-area: 1/1/2/5;
+    display: flex;
+    flex-direction: column;
+  }
+    .in_row {
+      display: flex;
+      flex-direction: row;
+    }
     </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#arrow_b').click(function(){
+          $('#f_email')[0].reset();
+          // $('#f_email').val('');
+        });
+      })
+    </script>
   </head>
   <body>
     <div class="cursor"></div>
@@ -123,8 +192,13 @@
 
       <div class="mail">
           <p>Подписаться на рассылку</p>
-          <input type="email" name="email" value="" placeholder="tellyourname@gmail.com">
-          <button type="button" name="arrow"></button>
+          <div class="in_row">
+            <div class="input_box">
+              <input type="email" name="email" value="" id="f_email" placeholder="" >
+              <label for="f_email">почта</label>
+            </div>
+            <button type="button" name="arrow" id="arrow_b"></button>
+          </div>
       </div>
       <div class="inf_blocks">
         <p>

@@ -373,3 +373,58 @@ _ __ ___   __ _ _ _ __
          background-image: url("../images/arrow_btn.svg");
          background-color: white;
        }
+
+
+
+
+
+
+       ///////
+
+
+
+
+
+
+       .input_box{
+         width: 32vw;
+         height: 45px;
+         border: 1px solid black;
+         display: flex;
+         flex-direction: row;
+         align-items: baseline;
+         margin-left: 12.5vw;
+         /* padding-top: 10px; */
+         /* display: flex; */
+         /* flex-direction: row; */
+         font-size: 1.2em;
+     }
+
+       label {
+         order: -1;
+         padding-left: 5px;
+         transition: all 0.3s ease-in;
+         /* transform: translateY(20px); */
+         pointer-events: none;
+         display: flex;
+         order: -1;
+       }
+
+       input:focus + label {
+         font-size: .6em;
+         transform: translateY(-16px);
+       }
+
+
+       input{
+         display: inline-block;
+         text-align: start;
+         margin-left: 12.5vw;
+         vertical-align: middle;
+         color: black;
+         margin-left: 3vw;
+         margin-left: 10px;
+         padding-left: 50px;
+         border: none;
+
+       }

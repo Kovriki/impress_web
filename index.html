@@ -88,7 +88,7 @@
 .member_popup p {
   line-height: 1em;
 }
-input {
+/* input {
   padding-left: 15px;
 }
 input:focus {
@@ -99,7 +99,7 @@ input[type="text"]:focus,
 input[type="email"]:focus{
   font-size: 0.3em;
 
-}
+} */
 .prisoedin{
   width: 300px;
   height: 72px;
@@ -107,6 +107,7 @@ input[type="email"]:focus{
   font-family: "Pragmatica_Italic";
   font-size: 1.2em;
   transition: .2s;
+  background-color: white;
 
 }
 .prisoedin:hover {
@@ -256,7 +257,58 @@ input[type="email"]:focus{
     display: grid;
     grid-area:1/2/2/3;
 }
+
+ /* .input_box{
+   width: 50vw;
+   height: 40px;
+   border:1px solid black;
+ }
+ .input{
+   border:none;
+ } */
+
+ .input_box{
+   width: 32vw;
+   height: 45px;
+   border: 1px solid black;
+   display: flex;
+   flex-direction: row;
+   align-items: baseline;
+   margin-left: 12.5vw;
+   /* padding-top: 10px; */
+   /* display: flex; */
+   /* flex-direction: row; */
+   font-size: 1.2em;
 }
+
+ label {
+   order: -1;
+   padding-left: 5px;
+   transition: all 0.3s ease-in;
+   /* transform: translateY(20px); */
+   pointer-events: none;
+   display: flex;
+   order: -1;
+ }
+
+ input:focus + label {
+   font-size: .6em;
+   transform: translateY(-16px);
+ }
+
+
+ input{
+   display: inline-block;
+   text-align: start;
+   margin-left: 12.5vw;
+   vertical-align: middle;
+   color: black;
+   margin-left: 3vw;
+   margin-left: 10px;
+   padding-left: 50px;
+   border: none;
+
+ }
 
 
     </style>
@@ -346,7 +398,11 @@ input[type="email"]:focus{
       </div>
         <p>Присоединяйся к Impress News и получи бесплатный доступ к лекциям от мемологов.</p>
 
-      <input type="text" name="name" value="" placeholder="имя">
+      <!-- <input type="text" name="name" value="" placeholder="имя"> -->
+      <div class="input_box">
+        <input type="email" name="email" value="" id="f_email" placeholder="" >
+        <label for="f_email">почта</label>
+      </div>
       <input type="email" name="email" value="" placeholder="email">
       <button class="prisoedin" type="button" name="prisoedin">присоединиться</button>
     </div>
@@ -401,7 +457,10 @@ input[type="email"]:focus{
 
       <div class="mail">
           <p>Подписаться на рассылку</p>
-          <input type="email" name="email" value="" placeholder="tellyourname@gmail.com">
+          <div class="input_box">
+            <input type="email" name="email" value="" id="f_email" placeholder="" >
+            <label for="f_email">почта</label>
+          </div>
           <button type="button" name="arrow"></button>
       </div>
       <div class="inf_blocks">
