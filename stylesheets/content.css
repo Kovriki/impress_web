@@ -19,7 +19,7 @@
   width: 40px;
   border-radius: 50%/50%;
   background-color: #2f0;
-  filter: blur(6px);
+  /* filter: blur(6px); */
   pointer-events: none;
   transition: .1s all ease;
   z-index: 40;

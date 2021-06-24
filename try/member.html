@@ -67,14 +67,20 @@ $(".cursor").addClass("active");
 $("a, input, .box").mouseout(function(){
 $(".cursor").removeClass("active");
 });
+
+$('a').click(function(e) {
+    e.preventDefault();  //stop the browser from following
+    window.location.href = '../images/wallpapers/phone/w_4.png';
 });
 
-
+});
 
 
     </script>
   </head>
   <body>
+    <a href="no-script.html">Download now!</a>
+
     <div class="cursor" id=""></div>
 
 <div class="box">

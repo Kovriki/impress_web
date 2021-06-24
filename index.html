@@ -284,7 +284,7 @@ input[type="email"]:focus{
     display: flex;
     width: 500px;
     border: 1px solid black;
-    
+
 }
 
 
@@ -319,8 +319,11 @@ input[type="email"]:focus{
    border: 1px solid black;
 
  }
- .member_popup input {
+ .member_popup input, .w{
    border: 1px solid black;
+ }
+ .member_popup p{
+   width: 80%;
 
  }
 
@@ -338,38 +341,6 @@ input[type="email"]:focus{
       });
       ///////
 
-      //
-      // $(".prisoedin").click(function(){
-      //   $(".member_popup").addClass("fade")
-      // })
-      ////
-
-      //курсор
-  //     $(document).mousemove(function(e) {
-  //     $('.cursor').css({
-  //     left:e.pageX - 10,
-  //     top:e.pageY - 10
-  //       });
-  //     });
-  //
-  //
-  //     $("a, input, .box").mouseover(function(){
-  //   $(".cursor").addClass("active");
-  //   });
-  //   $("a, input, .box").mouseout(function(){
-  //   $(".cursor").removeClass("active");
-  //   });
-  //
-  //   $("input").mouseover(function(){
-  // $(".cursor").addClass("inter");
-  // });
-  // $("input").mouseout(function(){
-  // $(".cursor").removeClass("inter");
-  // });
-
-
-
-// });
 
       /////////
       $(window).resize(function(){
@@ -407,17 +378,15 @@ input[type="email"]:focus{
     <div class="cursor"></div>
     <div class="member_popup">
       <div class="exit"></div>
-      <div class="gif_box">
-        <img src="images/cat_gif.gif" alt="This is an animated gif image, but it does not move"/>
-      </div>
+      <div class="gif_box"><img src="images/cat_gif.gif" alt="This is an animated gif image, but it does not move"/></div>
         <p>Присоединяйся к Impress News и получи бесплатный доступ к лекциям от мемологов.</p>
 
-      <input type="text" name="name" value="" placeholder="имя">
+      <input type="text" name="name" value="" placeholder="имя" class="w">
       <!-- <div class="input_box">
         <input type="email" name="email" value="" id="f_email" placeholder="" >
         <label for="f_email">почта</label>
       </div> -->
-      <input type="email" name="email" value="" placeholder="email">
+      <input type="email" name="email" value="" placeholder="email" class="w">
       <button class="prisoedin" type="button" name="prisoedin">присоединиться</button>
     </div>
     <div class="black"></div>
