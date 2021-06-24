@@ -11,7 +11,13 @@
     <script src="javascript/slick/slick.min.js"></script>
     <style media="screen">
         body{
-          background-color: #c4c4c4;
+          /* background-color: #c4c4c4; */
+        }
+        main{
+          padding-top: 3em;
+          padding-bottom: 3em;
+          background-color: #00FF19;
+
         }
       .bk_box{
         /* width: 70vw;
@@ -20,11 +26,13 @@
         box-sizing: border-box; */
         /* background-color: black; */
         margin: auto;
-        width: 90%;
-        height: 500px;
+        margin-top: 3em;
+        width: 70%;
+        height: 50em;
         /* color: black; */
         margin: auto;
         /* margin-bottom: 60px; */
+        /* overflow: hidden; */
       }
       /* a{
         width: 50vw;
@@ -82,11 +90,23 @@
       #bk33{background-image: url("images/book/bk33.png");}
       #bk34{background-image: url("images/book/bk34.png");}
       #bk35{background-image: url("images/book/bk35.png");}
+      .knig{
+        background-image: url("images/book/bk1.png");
+      }
+      .cursor{
+        filter: invert(1);
+      }
     </style>
     <script type="text/javascript">
-      // $(document).ready(function(){
-      //   $('.bk_box').slick();
-      //   });
+      $(document).ready(function(){
+        $('.bk_box').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+        });
     </script>
   </head>
   <body>
@@ -102,7 +122,8 @@
     <main>
       <!-- <img src="images/book/bk35.png" alt=""> -->
       <div class="bk_box">
-        <div id="" class="slide bk1"></div>
+        <!-- <div id="" class="slide bk1"></div> -->
+        <div class="slide knig ">        </div>
         <div id="" class="slide bk2"></div>
         <div id="" class="slide bk3"></div>
         <div id="" class="slide bk4"></div>
@@ -111,7 +132,7 @@
         <div id="" class="slide bk7"></div>
         <div id="" class="slide bk8"></div>
         <div id="" class="slide bk9"></div>
-        <!-- <div id="bk10" class="slide"></div>
+        <div id="bk10" class="slide"></div>
         <div id="bk11" class="slide"></div>
         <div id="bk12" class="slide"></div>
         <div id="bk13" class="slide"></div>
@@ -126,9 +147,9 @@
         <div id="bk22" class="slide"></div>
         <div id="bk23" class="slide"></div>
         <div id="bk24" class="slide"></div>
-        <div id="bk25" class="slide"></div> -->
+        <div id="bk25" class="slide"></div>
         <!-- <div id="bk26" class="slide"></div> -->
-        <!-- <div id="bk27" class="slide"></div>
+        <div id="bk27" class="slide"></div>
         <div id="bk28" class="slide"></div>
         <div id="bk29" class="slide"></div>
         <div id="bk30" class="slide"></div>
@@ -136,7 +157,7 @@
         <div id="bk32" class="slide"></div>
         <div id="bk33" class="slide"></div>
         <div id="bk34" class="slide"></div>
-        <div id="bk35" class="slide"></div> -->
+        <div id="bk35" class="slide"></div>
 
       </div>
     </main>
