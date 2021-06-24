@@ -88,6 +88,8 @@
     footer{
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      padding-top: 1em;
+      justify-items: center;
     }
     footer .mail {
       width: 75%;
