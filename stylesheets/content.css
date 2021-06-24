@@ -360,7 +360,6 @@ _ __ ___   __ _ _ _ __
        }
 
        .mail button {
-         cursor: pointer;
          display: inline-block;
          margin-left: 1em;
          vertical-align: middle;
@@ -425,6 +424,6 @@ _ __ ___   __ _ _ _ __
          margin-left: 3vw;
          margin-left: 10px;
          padding-left: 50px;
-         border: none;
+         /* border: none; */
 
        }

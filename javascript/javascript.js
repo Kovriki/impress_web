@@ -7,10 +7,10 @@ $(document).ready(function(){
   });
 
 
-  $("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket").mouseover(function(){
+  $("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn").mouseover(function(){
 $(".cursor").addClass("active");
 });
-$("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket").mouseout(function(){
+$("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn").mouseout(function(){
 $(".cursor").removeClass("active");
 });
 

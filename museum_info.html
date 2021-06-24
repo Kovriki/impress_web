@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>о музее</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="javascript/javascript.js"></script>
@@ -129,6 +129,7 @@
         margin-left: 10px;
         padding-left: 50px;
         border: none;
+        border: 1px solid black;
 
       }
       /* .mail input {
@@ -143,12 +144,19 @@
     width: 100vw;
     height: 10em;
     grid-area: 1/1/2/5;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
   }
     .in_row {
       display: flex;
       flex-direction: row;
+    }
+    .box a{
+      /* z-index: 30; */
+      position: absolute;
+    }
+    .blur{
+      /* z-index: 20 */
     }
     </style>
     <script type="text/javascript">
@@ -156,6 +164,15 @@
         $('#arrow_b').click(function(){
           $('#f_email')[0].reset();
           // $('#f_email').val('');
+        });
+////
+        $(".kniga").click(function(){
+        let url = "project.html";
+        location.href = "museum_choice.html";
+        });
+        $(".zdanie").click(function(){
+        let url = "project.html";
+        location.href = "build_info.html";
         });
       })
     </script>
@@ -174,14 +191,21 @@
     <!-- /префиксы backdrop-filter -->
 
     <main>
-      <div class="box ">
+      <div class="box kniga">
+
         <div class="blur"></div>
+        <!-- <a  class="" href="https://www.calameo.com/read/00665320613bb4b4b2ceb">kniga</a> -->
+
         <div class="book"></div>
+
         <!-- <a  class="" href="https://www.calameo.com/read/00665320613bb4b4b2ceb"></a> -->
       </div>
-      <div class="box">
+      <div class="box zdanie">
+
         <div class="blur"></div>
         <div class="build"></div>
+
+        <!-- <a class="build" href="build_info.html">zdanie</a> -->
 
           <!-- <a class="build" href="build_info.html"></a> -->
           <!-- <h5>здание</h5> -->
@@ -189,17 +213,23 @@
 
     </main>
     <footer>
-
       <div class="mail">
+          <p>Подписаться на рассылку</p>
+          <input type="email" name="email" value="" placeholder="tellyourname@gmail.com">
+          <button type="button" name="arrow" class="arrow_btn"></button>
+      </div>
+      <!-- <div class="mail">
           <p>Подписаться на рассылку</p>
           <div class="in_row">
             <div class="input_box">
               <input type="email" name="email" value="" id="f_email" placeholder="" >
               <label for="f_email">почта</label>
             </div>
+            <input type="email" name="email" value="" placeholder="tellyourname@gmail.com">
+
             <button type="button" name="arrow" id="arrow_b"></button>
           </div>
-      </div>
+      </div> -->
       <div class="inf_blocks">
         <p>
         часы работы:<br>
