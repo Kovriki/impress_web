@@ -267,7 +267,8 @@ input[type="email"]:focus{
    border:none;
  } */
 
- .input_box{
+ .input_box,
+ .member_popup .input_box {
    width: 32vw;
    height: 45px;
    border: 1px solid black;
@@ -279,7 +280,13 @@ input[type="email"]:focus{
    /* display: flex; */
    /* flex-direction: row; */
    font-size: 1.2em;
+   border: 1px solid black;
+    display: flex;
+    width: 500px;
+    border: 1px solid black;
+    
 }
+
 
  label {
    order: -1;
@@ -294,6 +301,8 @@ input[type="email"]:focus{
  input:focus + label {
    font-size: .6em;
    transform: translateY(-16px);
+   border: 1px solid black;
+
  }
 
 
@@ -306,7 +315,12 @@ input[type="email"]:focus{
    margin-left: 3vw;
    margin-left: 10px;
    padding-left: 50px;
-   border: none;
+   /* border: none; */
+   border: 1px solid black;
+
+ }
+ .member_popup input {
+   border: 1px solid black;
 
  }
 
@@ -398,11 +412,11 @@ input[type="email"]:focus{
       </div>
         <p>Присоединяйся к Impress News и получи бесплатный доступ к лекциям от мемологов.</p>
 
-      <!-- <input type="text" name="name" value="" placeholder="имя"> -->
-      <div class="input_box">
+      <input type="text" name="name" value="" placeholder="имя">
+      <!-- <div class="input_box">
         <input type="email" name="email" value="" id="f_email" placeholder="" >
         <label for="f_email">почта</label>
-      </div>
+      </div> -->
       <input type="email" name="email" value="" placeholder="email">
       <button class="prisoedin" type="button" name="prisoedin">присоединиться</button>
     </div>
