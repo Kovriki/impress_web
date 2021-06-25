@@ -18,13 +18,17 @@
     <link rel="stylesheet" href="stylesheets/style.css">
       <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
 
 
     <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+
+
     <script src="javascript/javascript.js"></script>
-    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script src="javascript/jquery-ui-touch-punch-master/jquery.ui.touch-punch.min.js"></script>
+
+<!-- <script src="jquery.ui.touch-punch.min.js"></script> -->
     <style media="screen">
       .containment-wrapper{
         width: 100vw;
@@ -109,7 +113,6 @@
 
     <script type="text/javascript">
     $(document).ready(function(){
-
     $( function() {
       $( ".drag" ).draggable({  grid: [ 20, 20 ], containment: ".containment-wrapper", scroll: false });
     } );
