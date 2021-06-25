@@ -8,10 +8,10 @@ $(document).ready(function(){
   });
 
 // курсор
-  $("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn, .unity").mouseover(function(){
+  $("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn, .unity, .video_cont").mouseover(function(){
 $(".cursor").addClass("active");
 });
-$("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn, .unity").mouseout(function(){
+$("a, input, .box, .cover .image_box, .drag, .date_box, .buy_ticket, .arrow_btn, .unity, .video_cont").mouseout(function(){
 $(".cursor").removeClass("active");
 });
 
