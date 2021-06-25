@@ -21,7 +21,28 @@
     <script src="javascript/javascript.js"></script>
 
     <style media="screen">
+    .cursor {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    /* height: 32px;
+    width: 32px; */
+    border-radius: 50%/50%;
+    background-color: #2f0;
+  filter: blur(6px);
+    pointer-events: none;
+    transition: filter .1s ease, background-color .1s ease;
+    z-index: 40;
+    }
+    .active{
+      height: 15px;
+      width: 15px;
+      background-color: blue;
+      filter: none;
+      transition: filter .1s ease, background-color .1s ease;
+      z-index: 41;
 
+    }
     @media only screen and (max-width: 1024px) {
     .member_popup, .black{
      display: none;
