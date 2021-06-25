@@ -170,6 +170,7 @@
   }
   #s1{
     border:1px solid black;
+    border-top: none;
     padding: 0;
     box-sizing: border-box;
     background-size: 90%;
