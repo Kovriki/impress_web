@@ -432,3 +432,9 @@ _ __ ___   __ _ _ _ __
          /* border: none; */
 
        }
+        .hidden{
+          opacity: 0;
+        }
+       .fade{
+         display: none;
+       }

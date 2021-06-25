@@ -58,7 +58,14 @@ let width = $(window).width();
 if(width <= 768){
   $('nav, .member_popup').addClass('fade');
   $('nav, .member_popup').addClass('hidden');
+  $('.menu-non-active, .icon-close').removeClass('hidden');
+  $('.menu-non-active, .icon-close').removeClass('fade');
   // $('nav').addClass('hidden');
+} else {
+  $('nav, .member_popup').removeClass('fade');
+  $('nav, .member_popup').removeClass('hidden');
+  $('.menu-non-active, .icon-close').addClass('hidden');
+  $('.menu-non-active, .icon-close').addClass('fade');
 }
 })
 

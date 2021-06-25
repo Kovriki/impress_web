@@ -155,6 +155,37 @@
     .this_p {
       font-family: "Pragmatica_Bold";
     }
+
+
+    @media only screen and (max-width: 1024px) {
+      .thrd_part, .scnd_part{
+        display: flex;
+        flex-direction: column;
+      }
+      .frst_part{
+      }
+      .frst_part, .video_cont {
+        width: 100vw;
+        height: 40em;
+
+        display: grid;
+        /* grid-template-columns: 1fr 2fr 1fr; */
+        align-items: flex-start;
+        box-sizing: border-box;
+      }
+      .video{
+        width: 100vw;
+
+        height: 25em;
+      }
+      .all_3, .all_2{
+        display: none;
+      }
+      .all_2{
+        height: 30em;
+
+      }
+    }
     </style>
     <script type="text/javascript">
 
@@ -163,13 +194,13 @@
   <body>
     <div class="cursor"></div>
 
-    <!-- <div class="menu-non-active">
+    <div class="menu-non-active fade hidden">
       <a id="s1"href="index.html"></a>
       <a href="#" class="icon-close"></a>
-    </div> -->
+    </div>
     <nav>
         <a id="s1" href="index.html"></a>
-        <!-- <a href="#" class="icon-close"></a> -->
+        <a href="#" class="icon-close fade hidden"></a>
         <a  id="s2" href="visiting.html">посещение</a>
         <a id="s3"  href="https://kovriki.github.io/interactive_web_poster/">акция</a>
         <a id="s4"  href="events.html">события</a>
@@ -193,10 +224,10 @@
         <br><br>Главная идея самого здания ­— простор и&nbspсвобода для&nbspтворчества.</p>
         <div class="photo_cont all_1">
         </div>
-        <div class="photo_cont"></div>
+        <div class="photo_cont all_3"></div>
         <div class="photo_cont all_2">
         </div>
-        <div class="photo_cont"></div>
+        <div class="photo_cont all_3"></div>
 
       </div>
 
