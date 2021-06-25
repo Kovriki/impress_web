@@ -137,9 +137,11 @@ input[type="email"]:focus{
 }
 @media only screen and (max-width: 768px)  {
   /* telefon4ik */
-  .cursor, .member_popup, .black{
+   .member_popup, .black{
     display: none;
   }
+
+
   nav{
       height: 144px;
       grid-template-rows: 1;
@@ -229,6 +231,7 @@ input[type="email"]:focus{
   }
   .menu-non-active #s1{
     grid-area: 1/1/2/2;
+        background-size: auto;
   }
   .menu-non-active .icon-close{
     grid-area: 1/2/2/3;
