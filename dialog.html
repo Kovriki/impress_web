@@ -13,8 +13,9 @@
       background-repeat: no-repeat;
       background-size: cover;
       border: 1px solid black;
-      background-color: blue;
+      /* background-color: blue;s */
       box-sizing: border-box;
+      transition: all .4s ease;
 
     }
     .w5{width: 50vw;}
@@ -26,7 +27,7 @@
     .h3{height: 30vw;}
     .h2{height: 20vw;}
     .h1{height: 10vw;}
-    #r_1{}
+
     .shape_wrapper{
       width: 100vw;
       height: auto;
@@ -34,7 +35,60 @@
       flex-wrap: wrap;
       flex-direction: row;
       box-sizing: border-box;
+    }
+    .shape:hover{
+    border-radius: 15px;
+    /* filter: blur(3px); */
+    transition: border-radius .4s ease;
+    }
+    #r_01{background-image: url("images/renders/r_01.png");}
+    #r_02{background-image: url("images/renders/r_02.png");}
+    #r_03{background-image: url("images/renders/r_05.png");}
+    #r_04{background-image: url("images/renders/r_04.png");}
+    #r_05{background-image: url("images/renders/r_03.png");}
+    #r_06{background-image: url("images/renders/r_06.png");}
+    #r_07{background-image: url("images/renders/r_07.png");}
+    .walk {
+      width: 40vw;
+      height: 10em;
+      background-color:  #2f0;
+      filter: blur(30px);
+      display: block;
+      margin: auto;
+      border-radius: 50%;
+      color: black;
+}
+.blur{
+  width: 100%;
+  height: 100%;
+  backdrop-filter:blur(30px);
+  -webkit-backdrop-filter:blur(30px);
+}
+.hh4{
+  font-family: "Pragmatica_Bold";
+  font-size: 3em;
+  display: -webkit-box;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 1em;
+  left: calc(50% - 140px);
+}
+.a_wrap {
+  position: relative;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+/* .hh4:hover ~ .blur, */
+.hh4:hover ~ .walk {
+  background-color:  blue;
 
+  /* transform: scale(10); */
+  /* transition: transform .3s ease; */
+}
+footer{
+  border-top: 1px solid black;
+}
     }
 </style>
 <script type="text/javascript">
@@ -56,21 +110,29 @@
     <main>
       <div class="shape_wrapper">
 
-      <div class="shape w2 h1"></div>
-      <div class="shape w5 h1"></div>
-      <div class="shape w3 h1"></div>
-      <div class="shape w1 h1"></div>
-      <div class="shape w2 h1"></div>
-      <div class="shape w5 h1"></div>
-      <div class="shape w2 h1"></div>
+      <div class="shape w2 h1" id="r_01"></div>
+      <div class="shape w5 h1" id="r_02"></div>
+      <div class="shape w3 h1" id="r_03"></div>
+      <div class="shape w1 h1" id="r_04"></div>
+      <div class="shape w2 h1" id="r_05"></div>
+      <div class="shape w5 h1" id="r_06"></div>
+      <div class="shape w2 h1" id="r_07"></div>
     </div>
-    <a href="images/wallpapers/phone.zip" download>
+    <div class="a_wrap">
+      <div class="walk"></div>
+      <!-- <div class="blur"></div> -->
+      <a class="hh4" target="_blank" href="https://kovriki.itch.io/dialog">vr выставка</a>
+      <!-- <h4></h4> -->
+    </div>
+
+
+    <!-- <a href="images/wallpapers/phone.zip" download>
       <img src="images/dop.png" alt="dop">
     </a>
     <a href="https://kovriki.itch.io/dialog">
       <img src="images/dop.png" alt="dop">
 
-    </a>
+    </a> -->
     </main>
     <footer>
 

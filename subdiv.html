@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>книжка</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="javascript/slick/slick.css">
+    <link rel="stylesheet" href="javascript/slick/slick-theme.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+    <script src="javascript/slick/slick.min.js"></script>
+    <style media="screen">
+        body{
+          /* background-color: #c4c4c4; */
+        }
+        main{
+          padding-top: 3em;
+          padding-bottom: 3em;
+          background-color: black;
+
+        }
+      .bk_box{
+        /* width: 70vw;
+        height: 800px;
+        overflow: hidden;
+        box-sizing: border-box; */
+        /* background-color: black; */
+        margin: auto;
+        margin-top: 3em;
+        width: 70%;
+        height: 50em;
+        /* color: black; */
+        margin: auto;
+        /* margin-bottom: 60px; */
+        /* overflow: hidden; */
+      }
+      /* a{
+        width: 50vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      } */
+      .slide {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* background-image: url("images/book/bk1.jpg") */
+        width: 100vw;
+        height: 800px;
+      }
+
+      .cursor{
+        filter: invert(1);
+      }
+
+
+      .k1{background-image: url("images/katalog/01.png");}
+      .k2{background-image: url("images/katalog/02.png");}
+      .k3{background-image: url("images/katalog/03.png");}
+      .k4{background-image: url("images/katalog/04.png");}
+      .k5{background-image: url("images/katalog/05.png");}
+      .k6{background-image: url("images/katalog/06.png");}
+      .k7{background-image: url("images/katalog/07.png");}
+      .k8{background-image: url("images/katalog/08.png");}
+      .k9{background-image: url("images/katalog/09.png");}
+      .k10{background-image: url("images/katalog/010.png");}
+      .k11{background-image: url("images/katalog/011.png");}
+      .k12{background-image: url("images/katalog/012.png");}
+      .k13{background-image: url("images/katalog/013.png");}
+      .k14{background-image: url("images/katalog/014.png");}
+      .k15{background-image: url("images/katalog/015.png");}
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.bk_box').slick({
+          dots: true,
+          infinite: true,
+          speed: 200,
+          fade: true,
+          cssEase: 'linear'
+        });
+        });
+    </script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <nav>
+        <a id="s1" href="index.html"></a>
+        <a id="s2" href="visiting.html">посещение</a>
+        <a id="s3"  href="afisha.html">афиша</a>
+        <a id="s4"  href="events.html">события</a>
+        <a id="s5"  href="shop.html">магазин</a>
+        <a id="s6"  href="museum_info.html">о музее</a>
+    </nav>
+    <main>
+      <div class="bk_box">
+          <div class="k1 slide"></div>
+          <div class="k2 slide"></div>
+          <div class="k3 slide"></div>
+          <div class="k4 slide"></div>
+          <div class="k5 slide"></div>
+          <div class="k6 slide"></div>
+          <div class="k7 slide"></div>
+          <div class="k8 slide"></div>
+          <div class="k9 slide"></div>
+          <div class="k10 slide"></div>
+          <div class="k11 slide"></div>
+          <div class="k12 slide"></div>
+          <div class="k13 slide"></div>
+          <div class="k14 slide"></div>
+          <div class="k15 slide"></div>
+      </div>
+    </main>
+    <footer>
+
+      <div class="mail">
+          <p>Подписаться на рассылку</p>
+          <input type="email" name="email" value="" placeholder="tellyourname@gmail.com">
+          <button type="button" name="arrow"></button>
+      </div>
+      <div class="inf_blocks">
+        <p>
+        часы работы:<br>
+        пн-пт: 9:00 – 22:00 <br>
+        сб-вс: 10:00 – 00:00 <br>
+        </p>
+      </div>
+      <div class="inf_blocks">
+        <p>
+        +7 (945) 344 34 34 <br>
+        Малая Пионерская 12 <br>
+        musimpress.com <br>
+        </p>
+      </div>
+      <div class="inf_blocks inst">
+          <a href="https://www.instagram.com/j0urn_ey/">instagram</a> <br>
+          <a href="https://www.facebook.com/sugumi.su/">facebook</a>
+      </div>
+      <div class="inf_blocks">
+        <p>
+          pepsiburger <br>
+          hse adc
+      </p>
+      </div>
+    </footer>
+  </body>
+</html>
