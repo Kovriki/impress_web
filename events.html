@@ -16,171 +16,18 @@
 
     <title>события</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/events.css">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script src="javascript/jQuere.3.5.1.js"></script>
     <script src="javascript/javascript.js"></script>
     <style media="screen">
-    main{
-    }
-    .events{
-      width: 100vw;
-      height: auto;
-      display: inline-flex;
-      flex-direction: row;
-          flex-flow: row wrap;
-    }
-      .event_box{
-        width: auto;
-        height: auto;
-        display: flex;
-        /* border: 1px solid black; */
-        box-sizing: border-box;
-        align-content: center;
-        /* justify-content: center; */
-        flex-flow: wrap row;
 
-      }
-      .cover{
-        width: auto;
-        height: auto;
-      }
-      .event_link{
-        width: 25vw;
-        height:3em;
-        display: flex;
-        border: 1px solid black;
-        border-top: none;
-        border-bottom: none;
-        box-sizing: border-box;
-        justify-content: center;
-        font-family: "Pragmatica_Bold";
-        font-size: 1.2em;
-        color:black;
-        box-sizing: border-box;
-        flex-direction: column;
-        text-decoration: none;
-        /* align-content:  flex-start; */
-      }
-      .image_box {
-        width: 25vw;
-        display: flex;
-        height: calc(25vw * 1.5);
-        /* background-image: ; */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-sizing: border-box;
-        /* border: 1px solid black; */
-        /* flex-direction: row; */
-        /* flex-wrap: wrap; */
-            flex-flow: wrap row;
-            /* border: 1px black solid; */
-      }
-
-      .event_box > .image_box {
-        background-position: -30vw;
-      }
-      @keyframes pulsar {
-        0%{
-          background-size: 100%;
-        }
-        100%{
-          background-size: 98%;
-        }
-      }
-      .p1 .cover .image_box{
-        /* animation: pulsar 1s ease-in  infinite alternate; */
-      }
-
-      #s4{ font-family: "Pragmatica_Bold"}
-
-      .p1 .cover {order:2;}
-      #night_01 {background-image: url("images/posters/night_01_n.png");
-      /* animation: slide 1s ease; */
-
-     }
-      #night_02 {background-image: url("images/posters/night_02_n.png"); order:1;
-      /* animation: slide 1s ease; */
-    }
-      #night_03 {background-image: url("images/posters/night_03_n.png"); order:3;
-      /* animation: slide 1s ease; */
-    }
-      .p2 .cover {order:1;}
-      #pole_01 {background-image: url("images/posters/pole_01.png");}
-      #pole_02 {background-image: url("images/posters/pole_02.png"); order:2;}
-      #pole_03 {background-image: url("images/posters/pole_03.png"); order:3;}
-      #pole_04 {background-image: url("images/posters/pole_04.png"); order:4;}
-      #pole_05 {background-image: url("images/posters/pole_05.png"); order:5;}
-      #pole_06 {background-image: url("images/posters/pole_06.png"); order:6;}
-      .p3 .cover {order:2;}
-      #open_01 {background-image: url("images/posters/open_01.png");}
-      #open_02 {background-image: url("images/posters/open_02.png"); order:1;}
-      #open_03 {background-image: url("images/posters/open_03.png"); order:3;}
-      .p4 .cover {order:4;}
-      .p4 .cover .event_link{border-top: 1px solid black;}
-      #fonts_01 {background-image: url("images/posters/fonts_01.png");}
-      #fonts_02 {background-image: url("images/posters/fonts_02.png"); order:1;}
-      #fonts_03 {background-image: url("images/posters/fonts_03.png"); order:3;}
-      #fonts_04 {background-image: url("images/posters/fonts_04.png"); order:2;}
-      #fonts_05 {background-image: url("images/posters/fonts_05.png"); order:5;}
-      #fonts_06 {background-image: url("images/posters/fonts_06.png"); order:6;}
-      .p5 .cover {order:3;}
-      .p5 .cover .event_link{border-top: 1px solid black;}
-      #winter_01 {background-image: url("images/posters/winter_01.png"); order:4;}
-      #winter_02 {background-image: url("images/posters/winter_02.png");}
-      #winter_03 {background-image: url("images/posters/winter_03.png"); order:2;}
-      #winter_04 {background-image: url("images/posters/winter_04.png"); order:1;}
-
-      .p1 {}
-      .p2 {}
-      .p3 {}
-      .p4 {}
-      .p5 {}
-
-      .bg_100{
-        background-position: 100%;
-      }
-      @keyframes slide {
-        0%{display: none;
-          background-position: -25vw;
-        }
-        1%{display: block;
-          background-position: -25vw;
-        }
-        100%{
-          background-position: 100%;
-
-        }
-      }
-        @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      /* iPad Portrait */
-    .image_box{
-      width: 33.3vw;
-      height: 50.1vw;
-    }
-    .event_link{
-      width: 33.3vw;
-    }
-    .event_box > .image_box {
-      background-position: -40vw;
-    }
-
-
-    }
-      .anim {
-        animation: slide 1s ease;
-        animation-fill-mode: forwards;
-      }
-      .p2 .event_link,
-      .p3 .event_link,
-      .p4 .event_link {
-        border-top: 1px solid black;
-      }
     </style>
     <script type="text/javascript">
       $(document).ready(function(){
         $(".cover").click(function(){
           $(this).siblings(".image_box").addClass("anim");
+          $(this).siblings(".image_box").addClass("bor");
 
           // setTimeout(function(){
           //   $(this).siblings(".image_box").addClass("bg_100");
@@ -197,11 +44,16 @@
   <body>
     <div class="cursor"></div>
 
+    <div class="menu-non-active">
+      <a id="s1"href="index.html"></a>
+      <a href="#" class="icon-close"></a>
+    </div>
     <nav>
         <a id="s1" href="index.html"></a>
-        <a id="s2" href="visiting.html">посещение</a>
-        <a id="s3"  href="afisha.html">афиша</a>
-        <a id="s4"  class="this_p"  href="events.html">события</a>
+        <a href="#" class="icon-close"></a>
+        <a  id="s2" href="visiting.html">посещение</a>
+        <a id="s3"  href="https://kovriki.github.io/interactive_web_poster/">акция</a>
+        <a id="s4"  href="events.html">события</a>
         <a id="s5"  href="shop.html">магазин</a>
         <a id="s6"  href="museum_info.html">о музее</a>
     </nav>
@@ -217,7 +69,7 @@
     <div class="event_box p1">
       <div class="cover">
         <a class="event_link" href="#">ночная джуси туса</a>
-        <div class="image_box" id="night_01"></div>
+        <div class="image_box bor" id="night_01"></div>
       </div>
 
       <div class="image_box" id="night_02"></div>
@@ -252,7 +104,7 @@
     <div class="event_box p4">
       <div class="cover">
         <a class="event_link" href="#">конкурс пиктограмм</a>
-        <div class="image_box" id="fonts_01"></div>
+        <div class="image_box bor" id="fonts_01"></div>
       </div>
       <div class="image_box" id="fonts_02"></div>
       <div class="image_box" id="fonts_03"></div>
@@ -264,7 +116,7 @@
     <div class="event_box p5">
       <div class="cover">
         <a class="event_link" href="#">зимняя афиша</a>
-        <div class="image_box" id="winter_02"></div>
+        <div class="image_box bor" id="winter_02"></div>
       </div>
 
       <div class="image_box" id="winter_01"></div>
@@ -273,9 +125,9 @@
       </div>
 
 
-      <div class="event_link">зимняя афиша</div>
+      <div class="event_link z">зимняя афиша</div>
 
-      <iframe src="https://kovriki.github.io/WEB-posterr/" width="100%" height="900px" align="center">
+      <iframe src="https://kovriki.github.io/WEB-posterr/" width="100%" height="250px" align="center">
       <!-- <iframe src="https://kovriki.github.io/interactive_web_poster/" width="100%" height="900px" align="center"> -->
       <!-- <iframe src="interactive_web_poster/index.html" width="100%" height="900px" align="center"> -->
       </iframe>
