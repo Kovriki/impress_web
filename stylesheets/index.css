@@ -255,10 +255,11 @@ input[type="email"]:focus{
   .icon-more,.icon-close{
     width: 50vw;
     height: 25vh;
-    background-color: blue;
+    /* background-color: blue; */
     display: grid;
     grid-area:1/2/2/3;
 }
+
 }
 
  /* .input_box{
